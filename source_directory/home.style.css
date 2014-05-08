@@ -1,0 +1,30 @@
+*
+{
+	margin: 0px;
+}
+
+header
+{
+	color: #333;
+	font-size: 20vw;
+	font-weight: bold;
+	letter-spacing: -2px;
+	font-family: goldfish;
+	text-decoration: none;
+	text-align: center;
+
+	display: block;
+	margin-bottom: 24px;
+}
+
+hr
+{
+	width: 50%;
+	min-width: 320px;
+	margin: 24px auto;
+	
+	border: none;
+	border-top-width: 3px;
+	border-top-color: #333;
+	border-top-style: dashed;
+}
