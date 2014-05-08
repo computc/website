@@ -54,3 +54,16 @@ hr
 	border-top-color: #333;
 	border-top-style: dashed;
 }
+
+@media(max-width: 640px)
+{
+	header > a#logo
+	{
+		margin-bottom: 8px;
+	}
+	
+	hr
+	{
+		margin: 8px auto;
+	}
+}
