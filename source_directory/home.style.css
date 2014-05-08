@@ -3,7 +3,19 @@
 	margin: 0px;
 }
 
+body
+{
+	background-color: #EEEEE7;
+}
+
 header
+{
+	text-align: center;
+	
+	padding: 8px;
+}
+
+header > a#logo
 {
 	color: #333;
 	font-size: 20vw;
@@ -11,10 +23,24 @@ header
 	letter-spacing: -2px;
 	font-family: goldfish;
 	text-decoration: none;
-	text-align: center;
 
-	display: block;
+	display: block;	
 	margin-bottom: 24px;
+}
+
+header > a#goto
+{
+	color: #4A7B6F;
+	font-size: 24px;
+	white-space: nowrap;
+	font-family: goldfish;
+
+	margin: 8px;
+}
+
+header > a > .fa
+{
+	margin-right: 8px;
 }
 
 hr
