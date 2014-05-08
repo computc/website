@@ -5,6 +5,9 @@
 
 body
 {
+	color: #242E35;
+	font-family: calibri;
+	
 	min-width: 356px;
 	overflow-x: hidden;
 	
@@ -83,9 +86,6 @@ hr
 
 #container
 {
-	color: #242E35;
-	font-family: calibri;
-	
 	position: relative;
 }
 
@@ -170,5 +170,30 @@ hr
 		
 		margin-bottom: auto;
 		display: table-cell;
+	}
+}
+
+/* The Footer */
+
+footer
+{
+	padding: 8px;
+	margin-top: 24px;
+	background-color: #CCDDDD;
+}
+
+footer > small
+{
+	width: 164px;
+	margin: auto;
+	display: block;
+	text-align: center;
+}
+
+@media(max-width: 640px)
+{
+	footer
+	{
+		margin-top: auto;
 	}
 }
