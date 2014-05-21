@@ -7,27 +7,73 @@
 		
 		<link href="fonts/fontawesome.css" rel="stylesheet" type="text/css"/>
 		<link href="fonts/goldfish.css" rel="stylesheet" type="text/css"/>
-		<link href="home.style.css" rel="stylesheet" type="text/css"/>
+		
+		<link href="default.layout.style.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		
 		<header>
-			<a id="logo" href="home">CompUTC</a>
-			<a id="goto" href="home"><span class="fa fa-home"></span>Home</a>
-			<a id="goto" href="about"><span class="fa fa-smile-o"></span>About</a>
-			<a id="goto" href="events"><span class="fa fa-calendar"></span>Events</a>
-			<a id="goto" href="contact"><span class="fa fa-comment-o"></span>Contact</a>
+			
+			<div id="user">
+				{{#if user}}
+					<div id="logout">
+						<b>
+							Welcome, {{user.name}}!
+						</b>
+						<a href="/logout">
+							Logout?
+						</a>
+					</div>
+				{{else}}
+					<form id="login">
+						<div class="credential">
+							<label for="username">Username:</label>
+							<input type="text" id="username"/>
+						</div>
+						<div class="credential">
+							<label for="password">Password:</label>
+							<input type="text" id="password"/>
+						</div>
+					</form>
+				{{/if}}
+			</div>
+			
+			<div id="title">
+				<a href="/">CompUTC</a>
+			</div>
+			
+			<div id="navigation">
+				<div class="partition">
+					<a href="/">
+						<span class="fa fa-home"></span>
+						<span class="pagetitle">Home</span>
+					</a>
+					<a href="/about">
+						<span class="fa fa-smile-o"></span>
+						<span class="pagetitle">About</span>
+					</a>
+				</div>
+				<div class="partition">
+					<a href="/events">
+						<span class="fa fa-calendar"></span>
+						<span class="pagetitle">Events</span>
+					</a>
+					<a href="/contact">
+						<span class="fa fa-comment-o"></span>
+						<span class="pagetitle">Contact</span>
+					</a>
+				</div>
+			</div>
+			
 		</header>
 		
 		<div id="container">
 			
 			<section id="content">
-
-{{{body}}}
-
+				{{{body}}}
 			</section>
 		
-			<section id="navigation">
+			<section id="menu">
 				
 				<div class="category">
 					<b>Suborgs</b>
@@ -60,9 +106,8 @@
 		<footer>
 			
 			<small>
-				Why are you reading
-				this at the bottom
-				of the page?
+				Gee! You read all the way to the bottom of the page!
+				You must have a lot of time to waste on the internet. :D
 			</small>
 			
 		</footer>
