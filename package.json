@@ -1,8 +1,12 @@
 {
 	"name": "computc.org",
-	"version": "2.0.1",
+	"version": "2.0.2",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/arcym/computc.org.git"
+	},
 	"dependencies": {
 		"express": "*",
-		"forever": "*"
+		"express3-handlebars": "*"
 	}
 }
