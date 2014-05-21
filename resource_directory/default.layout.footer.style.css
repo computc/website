@@ -1,0 +1,25 @@
+footer
+{
+	padding: 8px;
+	margin-top: 24px;
+	background-color: #CCDDDD;
+}
+
+footer > small
+{
+	margin: auto;
+	width: 320px;
+	display: block;
+	
+	font-size: 12px;
+	line-height: 1em;
+	text-align: center;
+}
+
+@media(max-width: 640px)
+{
+	footer
+	{
+		margin-top: auto;
+	}
+}
