@@ -20,8 +20,8 @@ body
 
 #frame
 {
-	min-height: 100%;
 	margin: auto;
+	min-height: 100%;
 	min-width: 320px;
 	max-width: 1280px;
 }
@@ -36,7 +36,7 @@ hr
 {
 	width: 50%;
 	min-width: 180px;
-	margin: 24px auto;
+	margin: 1.5em auto;
 	
 	border: none;
 	border-top-width: 3px;
@@ -48,6 +48,6 @@ hr
 {
 	#content > hr
 	{
-		margin: 8px auto;
+		margin: 1em auto;
 	}
 }

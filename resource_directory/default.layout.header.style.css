@@ -1,8 +1,3 @@
-header
-{
-	margin-bottom: 24px;
-}
-
 header > #user
 {
 	padding: 8px;
@@ -40,7 +35,7 @@ header > #user > #login > .credential > input
 
 header > #title
 {
-	margin: 24px auto;
+	margin: 2em auto;
 }
 
 header > #title > a
@@ -66,7 +61,7 @@ header > #navigation  > a
 	margin: auto 4px;
 	
 	color: #4A7B6F;
-	font-size: 24px;
+	font-size: 1.5em;
 	white-space: nowrap;
 	font-family: goldfish;
 	text-decoration: none;
@@ -89,13 +84,8 @@ header > #navigation  > a > .pagetitle
 {
 	header > #title
 	{
-		margin-top: 16px;
-		margin-bottom: 8px;
-	}
-	
-	header
-	{
-		margin-bottom: 16px;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
 	}
 }
 
@@ -103,6 +93,6 @@ header > #navigation  > a > .pagetitle
 {
 	header > #title > a
 	{
-		font-size: 62px;
+		font-size: 64px;
 	}
 }
