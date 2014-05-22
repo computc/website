@@ -2,13 +2,12 @@ header > #user
 {
 	padding: 8px;
 	
-	color: #4A7B6F;
 	font-size: 24px;
 	line-height: 1em;
 	text-align: right;
 	font-family: goldfish;
 	
-	background-color: #CCDDDD;
+	background-color: #F5DA3F;
 }
 
 header > #user > #logout > a
@@ -42,7 +41,7 @@ header > #title > a
 {
 	display: block;
 	
-	color: #242E35;
+	color: #111;
 	font-size: 19vw;
 	font-weight: bold;
 	text-align: center;
@@ -60,7 +59,7 @@ header > #navigation  > a
 {
 	margin: auto 4px;
 	
-	color: #4A7B6F;
+	color: #CC3333;
 	font-size: 1.5em;
 	white-space: nowrap;
 	font-family: goldfish;

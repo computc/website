@@ -12,10 +12,10 @@ body
 {
 	height: 100%;
 	
-	color: #242E35;
+	color: #111;
 	font-family: calibri;
 	
-	background-color: #EEEEE7;
+	background-color: #F8F8F8;
 }
 
 #frame
@@ -41,7 +41,7 @@ hr
 	border: none;
 	border-top-width: 3px;
 	border-top-style: dashed;
-	border-top-color: #242E35;
+	border-top-color: #111;
 }
 
 @media(max-width: 640px)
