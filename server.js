@@ -16,12 +16,7 @@ server.set("views", "content_directory/");
 ///////////////////ROUTING///////////////////
 ////////////////////////////////////////////
 
-var router = require("./router.js");
-
-server.get("/", router.home);
-server.get("/*", router.content);
-server.get("/*", router.resource);
-server.get("/*", router.error);
+require("./router.js")(server);
 
 //////////////////////////////////////////////
 //////////////////LISTENING//////////////////
