@@ -18,8 +18,7 @@ Assuming you have both [Git] and [NodeJS] already installed on your system...
 git init
 git clone https://github.com/computc/computc.org.git
 
-cd computcorg
-npm install
+run.bat
 ```
 
 ## Navigation
