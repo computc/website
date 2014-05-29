@@ -1,6 +1,5 @@
 #blurb
 {
-	font-size: 18px;
 	text-align: center;
 }
 
@@ -20,23 +19,38 @@
 	line-height: 1em;
 	position: absolute;
 	
+	color: #FFF;
 	text-align: center;
 	font-family: goldfish;
 	text-decoration: none;
-}
-
-#call-to-action > #login.button
-{
-	left: 50%;
-	right: 0px;
-	color: #111;
-	background-color: #F5DA3F;
 }
 
 #call-to-action > #signup.button
 {
 	left: 0px;
 	right: 50%;
-	color: #FFF;
+	
 	background-color: #3952A6;
+}
+
+#call-to-action > #login.button
+{
+	left: 50%;
+	right: 0px;
+	
+	background-color: #CC3333;
+}
+
+#schedule > b
+{
+	display: block;
+	
+	font-size: 28px;
+	text-align: center;
+	font-family: goldfish;
+}
+
+#schedule > .event
+{
+	margin: 1em 0px;
 }
