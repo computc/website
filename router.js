@@ -1,9 +1,6 @@
 var fs = require("fs");
 
-var CONTENT_DIRECTORY = "content_directory/";
-var RESOURCE_DIRECTORY = "resource_directory/";
-
-module.exports.home = function(request, response, next)
+module.exports.home = function(request, response)
 {
 	response.render("home");
 }
@@ -11,19 +8,38 @@ module.exports.home = function(request, response, next)
 module.exports.content = function(request, response, next)
 {
 	var route = request.params[0];
+	var CONTENT_DIRECTORY = "content_directory/";
 	var path = CONTENT_DIRECTORY + route + ".handlebars";
-	if(fs.existsSync(path)) {return response.render(route);}
 	
-	next();
+	fs.exists(path, function(exists)
+	{
+		if(exists)
+		{
+			response.render(route);
+		}
+		else
+		{
+			next();
+		}
+	});
 }
 
 module.exports.resource = function(request, response, next)
 {
-	var route = request.params[0];
-	var path = RESOURCE_DIRECTORY + route;
-	if(fs.existsSync(path)) {return response.sendfile(path);}
+	var RESOURCE_DIRECTORY = "resource_directory/";
+	var path = RESOURCE_DIRECTORY + request.params[0];
 	
-	next();
+	fs.exists(path, function(exists)
+	{
+		if(exists)
+		{
+			response.sendfile(path);
+		}
+		else
+		{
+			next();
+		}
+	});
 }
 
 module.exports.error = function(request, response)
