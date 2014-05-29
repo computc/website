@@ -1,0 +1,36 @@
+#call-to-action
+{
+	height: 3em;
+	overflow: hidden;
+	position: relative;
+	border-radius: 3px;
+}
+
+#call-to-action > .button
+{
+	top: 0px;
+	padding: 1em;
+	display: block;
+	line-height: 1em;
+	position: absolute;
+	
+	text-align: center;
+	font-family: goldfish;
+	text-decoration: none;
+}
+
+#call-to-action > #login.button
+{
+	left: 50%;
+	right: 0px;
+	color: #111;
+	background-color: #F5DA3F;
+}
+
+#call-to-action > #signup.button
+{
+	left: 0px;
+	right: 50%;
+	color: #FFF;
+	background-color: #3952A6;
+}
