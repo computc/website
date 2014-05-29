@@ -1,2 +1,2 @@
 call npm install
-node server
+call node server
