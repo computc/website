@@ -2,8 +2,6 @@
 
 This is our repository for our website!! We want you to contribute!!
 
-> please insert a blurb about our objectives eventually.
-
 ## Technologies
 
 * [Express] as our server framework
@@ -12,14 +10,7 @@ This is our repository for our website!! We want you to contribute!!
 
 ## Installation
 
-Assuming you have both [Git] and [NodeJS] already installed on your system...
-
-```sh
-git init
-git clone https://github.com/computc/computc.org.git
-
-run.bat
-```
+Assuming you have both [Git] and [NodeJS] already installed on your system, you can begin the server by executing "run.bat," which will download everything you'll need.
 
 ## Navigation
 
