@@ -1,11 +1,12 @@
 #blurb
 {
-	text-align: center;
+	text-indent: 2em;
+	text-align: justify;
 }
 
 #call-to-action
 {
-	height: 3em;
+	height: 4em;
 	overflow: hidden;
 	position: relative;
 	border-radius: 3px;
@@ -16,13 +17,19 @@
 	top: 0px;
 	padding: 1em;
 	display: block;
-	line-height: 1em;
+	line-height: 2em;
 	position: absolute;
 	
-	color: #FFF;
 	text-align: center;
-	font-family: goldfish;
+	white-space: nowrap;
 	text-decoration: none;
+}
+
+#call-to-action > .button > b
+{
+	color: #F8F8F8;
+	font-size: 2em;
+	font-family: goldfish;
 }
 
 #call-to-action > #signup.button
@@ -51,6 +58,24 @@
 }
 
 #schedule > .event
+{
+	padding: 0.5em;
+	
+	color: #F8F8F8;
+	border-radius: 3px;
+}
+
+#schedule > .event:nth-child(even)
+{
+	background-color: #CC3333;
+}
+
+#schedule > .event:nth-child(odd)
+{
+	background-color: #3952A6;
+}
+
+#schedule > .event:not(:last-child)
 {
 	margin: 1em 0px;
 }
