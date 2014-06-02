@@ -1,12 +1,16 @@
 {
 	"name": "computc.org",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/arcym/computc.org.git"
 	},
 	"dependencies": {
 		"express": "*",
-		"express3-handlebars": "*"
+		"express3-handlebars": "*",
+		"connect": "*",
+		"passport": "*",
+		"passport-google-oauth": "*",
+		"mongojs": "*"
 	}
 }
