@@ -10,7 +10,7 @@
 		"express3-handlebars": "*",
 		"connect": "*",
 		"passport": "*",
-		"passport-google-oauth": "*",
+		"passport-local": "*",
 		"mongojs": "*"
 	}
 }
