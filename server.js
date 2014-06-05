@@ -1,4 +1,5 @@
 var express = require("express");
+
 express = express();
 
 //////////////////////////////////////////////
@@ -29,9 +30,15 @@ var passport = require("passport");
 require("./passport.config.js")(passport, mongo);
 
 var connect = require("connect");
-express.use(connect.cookieParser());
-express.use(connect.session({secret: "thing"}));
+var flash = require("connect-flash");
 
+express.use(connect.json());
+express.use(connect.urlencoded());
+express.use(connect.cookieParser());
+
+express.use(flash());
+
+express.use(connect.session({secret: "thing"}));
 express.use(passport.initialize());
 express.use(passport.session());
 
