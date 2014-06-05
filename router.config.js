@@ -1,8 +1,42 @@
 module.exports = function(express, passport, mongo)
 {
+	/*express.use(function(request, response, next)
+	{
+		console.log("/" + request.params[0]);
+		next();
+	});*/
+	
+	express.use(function(request, response, next)
+	{
+		if(request.isAuthenticated())
+		{
+			response.locals.user = request.user;
+		}
+		
+		next();
+	});
+	
 	express.get("/", function(request, response)
 	{
 		response.render("home");
+	});
+	
+	express.get("/*", function(request, response, next)
+	{
+		var RESOURCE_DIRECTORY = __dirname + "/resource_directory/";
+		var path = RESOURCE_DIRECTORY + request.params[0];
+		
+		require("fs").exists(path, function(exists)
+		{
+			if(exists)
+			{
+				response.sendfile(path);
+			}
+			else
+			{
+				next();
+			}
+		});
 	});
 	
 	express.get("/login", function(request, response, next)
@@ -35,7 +69,7 @@ module.exports = function(express, passport, mongo)
 		response.redirect("/");
 	});
 	
-	express.get("/profile", ensureAuthentication, function(request, response, next)
+	express.get("/profile", ensureUserAuthentication, function(request, response, next)
 	{
 		response.render("profile");
 	});
@@ -46,13 +80,11 @@ module.exports = function(express, passport, mongo)
 	});
 }
 
-function ensureAuthentication(request, response, next)
+function ensureUserAuthentication(request, response, next)
 {
 	if(request.isAuthenticated())
 	{
 		next();
-		
-		response.locals.user = request.user; //express.use() this!
 	}
 	else
 	{

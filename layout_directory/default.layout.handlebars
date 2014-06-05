@@ -22,12 +22,8 @@
 				<div id="user">
 					{{#if user}}
 						<div id="logout">
-							<b>
-								Welcome, {{user.name}}!
-							</b>
-							<a href="/logout">
-								Logout?
-							</a>
+							<a href="/profile">{{user.email}}</a>!
+							<a href="/logout">Logout</a>?
 						</div>
 					{{else}}
 						<form id="login">

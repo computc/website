@@ -29,14 +29,17 @@ mongo.users.drop();
 var passport = require("passport");
 require("./passport.config.js")(passport, mongo);
 
+//////////////////////////////////////////////
+/////////////////CONFIGURING/////////////////
+////////////////////////////////////////////
+
 var connect = require("connect");
 var flash = require("connect-flash");
 
+express.use(flash());
 express.use(connect.json());
 express.use(connect.urlencoded());
 express.use(connect.cookieParser());
-
-express.use(flash());
 
 express.use(connect.session({secret: "thing"}));
 express.use(passport.initialize());
@@ -45,8 +48,6 @@ express.use(passport.session());
 //////////////////////////////////////////////
 ///////////////////ROUTING///////////////////
 ////////////////////////////////////////////
-
-express.use("/", require("express").static("resource_directory/"));
 
 require("./router.config.js")(express, passport, mongo);
 

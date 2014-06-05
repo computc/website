@@ -1,0 +1,2 @@
+encrypt the passwords before saving them in the database!!
+request more information from the users during signup.

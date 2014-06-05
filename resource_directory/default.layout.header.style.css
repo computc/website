@@ -13,7 +13,6 @@ header > #user
 header > #user > #logout > a
 {
 	color: inherit;
-	text-decoration: none;
 }
 
 header > #user > #login > .credential
