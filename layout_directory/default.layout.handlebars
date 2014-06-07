@@ -5,9 +5,6 @@
 		<title>CompUTC</title>
 		<meta charset="UTF-8"/>
 		
-		<link href="fonts/fontawesome.css" rel="stylesheet" type="text/css"/>
-		<link href="fonts/goldfish.css" rel="stylesheet" type="text/css"/>
-		
 		<link href="default.layout.style.css" rel="stylesheet" type="text/css"/>
 		<link href="default.layout.header.style.css" rel="stylesheet" type="text/css"/>
 		<link href="default.layout.container.style.css" rel="stylesheet" type="text/css"/>
@@ -19,46 +16,44 @@
 			
 			<header>
 				
-				<div id="user">
+				<div id="panel">
 					{{#if user}}
 						<div id="logout">
 							<a href="/profile">{{user.email}}</a>!
 							<a href="/logout">Logout</a>?
 						</div>
 					{{else}}
-						<form id="login">
-							<div class="credential">
-								<label for="username">Username:</label>
-								<input type="text" id="username"/>
-							</div>
-							<div class="credential">
-								<label for="password">Password:</label>
-								<input type="password" id="password"/>
-							</div>
-						</form>
+						<div id="login">
+							<a href="/signup">Signup</a> or 
+							<a href="/login">Login</a>!
+						</div>
 					{{/if}}
 				</div>
 				
-				<div id="title">
+				<div id="banner">
 					<a href="/">CompUTC</a>
 				</div>
 				
-				<div id="navigation">
+				<div id="menu">
 					<a href="/">
 						<span class="fa fa-home"></span>
-						<span class="pagetitle">Home</span>
+						<span class="pagename">Home</span>
 					</a>
 					<a href="/about">
 						<span class="fa fa-smile-o"></span>
-						<span class="pagetitle">About</span>
+						<span class="pagename">About</span>
 					</a>
 					<a href="/events">
 						<span class="fa fa-calendar"></span>
-						<span class="pagetitle">Events</span>
+						<span class="pagename">Events</span>
 					</a>
 					<a href="/contact">
 						<span class="fa fa-comment-o"></span>
-						<span class="pagetitle">Contact</span>
+						<span class="pagename">Contact</span>
+					</a>
+					<a href="/sitemap">
+						<span class="fa fa-bars"></span>
+						<span class="pagename">Sitemap</span>
 					</a>
 				</div>
 				
@@ -77,41 +72,39 @@
 							<b>Suborgs</b>
 						</li>
 						<li>
-						</li>
-						<li>
 							<a href="/">
 								<span class="fa fa-cogs"></span>
-								<span class="pagetitle">Tutoring</span>
+								<span class="pagename">Tutoring</span>
 							</a>
 						</li>
 						<li>
 							<a href="/">
 								<span class="fa fa-lock"></span>
-								<span class="pagetitle">Cyber Security</span>
+								<span class="pagename">Info Security</span>
 							</a>
 						</li>
 						<li>
 							<a href="/">
 								<span class="fa fa-cube"></span>
-								<span class="pagetitle">Robotics</span>
+								<span class="pagename">Robotics</span>
 							</a>
 						</li>
 						<li>
 							<a href="/">
 								<span class="fa fa-gamepad"></span>
-								<span class="pagetitle">Game Dev</span>
+								<span class="pagename">Game Dev</span>
 							</a>
 						</li>
 						<li>
 							<a href="/">
 								<span class="fa fa-code"></span>
-								<span class="pagetitle">Competitions</span>
+								<span class="pagename">Competitions</span>
 							</a>
 						</li>
 						<li>
 							<a href="/">
 								<span class="fa fa-cloud"></span>
-								<span class="pagetitle">Web Design</span>
+								<span class="pagename">Web Design</span>
 							</a>
 						</li>
 						<li>
@@ -124,13 +117,13 @@
 						<li>
 							<a target="_blank" href="http://www.utc.edu/computer-science">
 								<span class="fa fa-university"></span>
-								<span class="pagetitle">UTC Page</span>
+								<span class="pagename">UTC Page</span>
 							</a>
 						</li>
 						<li>
 							<a target="_blank" href="http://www.computer.org/">
 								<span class="fa fa-asterisk"></span>
-								<span class="pagetitle">IEEECS Website</span>
+								<span class="pagename">IEEECS Website</span>
 							</a>
 						</li>
 					</ul>
@@ -142,25 +135,25 @@
 						<li>
 							<a href="/">
 								<span class="fa fa-home"></span>
-								<span class="pagetitle">Home</span>
+								<span class="pagename">Home</span>
 							</a>
 						</li>
 						<li>
 							<a href="/about">
 								<span class="fa fa-smile-o"></span>
-								<span class="pagetitle">About</span>
+								<span class="pagename">About</span>
 							</a>
 						</li>
 						<li>
 							<a href="/events">
 								<span class="fa fa-calendar"></span>
-								<span class="pagetitle">Events</span>
+								<span class="pagename">Events</span>
 							</a>
 						</li>
 						<li>
 							<a href="/contact">
 								<span class="fa fa-comment-o"></span>
-								<span class="pagetitle">Contact</span>
+								<span class="pagename">Contact</span>
 							</a>
 						</li>
 					</ul>
@@ -168,6 +161,7 @@
 				</div>
 				
 				<div class="menu" id="right">
+					
 					<ul>
 						<li>
 							<b>Social</b>
@@ -175,40 +169,41 @@
 						<li>
 							<a target="_blank" href="https://twitter.com/computcorg">
 								<span class="fa fa-twitter-square"></span>
-								<span class="pagetitle">Twitter</span>
+								<span class="pagename">Twitter</span>
 							</a>
 						</li>
 						<li>
 							<a target="_blank" href="https://www.facebook.com/groups/ajeezy">
 								<span class="fa fa-facebook-square"></span>
-								<span class="pagetitle">Facebook</span>
+								<span class="pagename">Facebook</span>
 							</a>
 						</li>
 						<li>
 							<a target="_blank" href="https://github.com/computc">
 								<span class="fa fa-github-square"></span>
-								<span class="pagetitle">Github</span>
+								<span class="pagename">Github</span>
 							</a>
 						</li>
 						<li>
 							<a target="_blank" href="https://www.linkedin.com/groups/CompUTC-6700431">
 								<span class="fa fa-linkedin-square"></span>
-								<span class="pagetitle">Linkedin</span>
+								<span class="pagename">Linkedin</span>
 							</a>
 						</li>
 						<li>
 							<a target="_blank" href="https://www.youtube.com/channel/UCHXYDL4XvpYNLjiVnsLGUbg">
 								<span class="fa fa-youtube-square"></span>
-								<span class="pagetitle">Youtube</span>
+								<span class="pagename">Youtube</span>
 							</a>
 						</li>
 						<li>
 							<a target="_blank" href="http://steamcommunity.com/groups/computc">
 								<span class="fa fa-steam-square"></span>
-								<span class="pagetitle">Steam</span>
+								<span class="pagename">Steam</span>
 							</a>
 						</li>
 					</ul>
+					
 				</div>
 				
 			</div>

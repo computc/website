@@ -1,4 +1,4 @@
-header > #user
+header > #panel
 {
 	padding: 8px;
 	
@@ -8,40 +8,26 @@ header > #user
 	font-family: goldfish;
 	
 	background-color: #F5DA3F;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 
-header > #user > #logout > a
+header > #panel   a
 {
 	color: inherit;
 }
 
-header > #user > #login > .credential
-{
-	margin-left: 8px;
-	display: inline-block;
-}
-
-header > #user > #login > .credential > input
-{
-	padding: 3px;
-	border: none;
-	width: 100px;
-	line-height: 18px;
-	vertical-align: top;
-	font-family: calibri;
-}
-
-header > #title
+header > #banner
 {
 	margin: 2em auto;
 }
 
-header > #title > a
+header > #banner > a
 {
 	display: block;
 	
 	color: #111;
-	font-size: 19vw;
+	font-size: 246px;
 	font-weight: bold;
 	text-align: center;
 	letter-spacing: -2px;
@@ -49,14 +35,14 @@ header > #title > a
 	text-decoration: none;
 }
 
-header > #navigation
+header > #menu
 {
 	text-align: center;
 }
 
-header > #navigation  > a
+header > #menu > a
 {
-	margin: auto 4px;
+	margin: auto 0.25em;
 	
 	color: #CC3333;
 	font-size: 1.5em;
@@ -65,32 +51,31 @@ header > #navigation  > a
 	text-decoration: none;
 }
 
-header > #navigation  > a > .pagetitle
+header > #menu > a > .pagename
 {
 	text-decoration: underline;
 }
 
-@media(min-width: 1280px)
+@media(max-width: 1280px)
 {
-	header > #title > a
+	header > #banner > a
 	{
-		font-size: 246px;
+		font-size: 19vw;
 	}
 }
 
 @media(max-width: 640px)
 {
-	header > #title
+	header > #banner
 	{
-		margin-top: 1em;
-		margin-bottom: 0.5em;
+		margin: 1em auto;
 	}
 }
 
-@media(max-width: 320px)
+@media(max-width: 480px)
 {
-	header > #title > a
+	header > #banner > a
 	{
-		font-size: 64px;
+		font-size: 90px;
 	}
 }

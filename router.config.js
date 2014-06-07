@@ -58,10 +58,14 @@ module.exports = function(express, passport, mongo)
 	
 	express.post("/signup", passport.authenticate("local-signup",
 	{
-		successRedirect: "/profile",
 		failureRedirect: "/signup",
 		failureFlash: true
-	}));
+	}),
+	function(request, response, next)
+	{
+		console.log(request.body)
+		response.redirect("/profile");
+	});
 	
 	express.get("/logout", function(request, response, next)
 	{

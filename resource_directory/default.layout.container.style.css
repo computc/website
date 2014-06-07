@@ -5,9 +5,8 @@
 
 #content
 {
-	height: 100%;
 	padding: 0em 2em;
-	margin: 2em 182px;
+	margin: 2em 186px;
 	min-height: 24.5em;
 }
 
@@ -22,7 +21,7 @@
 	background-color: #F5DA3F;
 }
 
-.menu#left
+#left.menu
 {
 	left: 0px;
 	
@@ -30,7 +29,7 @@
 	border-bottom-right-radius: 2px;
 }
 
-.menu#right
+#right.menu
 {
 	right: 0px;
 	
@@ -51,8 +50,6 @@
 
 .menu > ul > li > b
 {
-	display: block;
-	
 	font-size: 1.5em;
 	white-space: nowrap;
 	font-family: goldfish;
@@ -65,7 +62,7 @@
 	text-decoration: none;
 }
 
-.menu > ul > li > a > .pagetitle
+.menu > ul > li > a > .pagename
 {
 	text-decoration: underline;
 }
@@ -87,12 +84,10 @@
 	
 	#right.menu
 	{
-		width: 100%;
-		display: table;
-		padding: 1em 0em;
+		width: auto;
+		display: block;
 		position: static;
 		line-height: 1em;
-		table-layout: fixed;
 		
 		text-align: center;
 		
@@ -102,10 +97,10 @@
 	#right.menu > ul > li
 	{
 		display: inline;
-		margin: auto 4px;
+		margin: auto 0.25em;
 	}
 	
-	#right.menu > ul > li > b
+	#right.menu > ul > li:first-child
 	{
 		display: none;
 	}
