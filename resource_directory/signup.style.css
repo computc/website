@@ -1,0 +1,116 @@
+b
+{
+	display: block;
+	
+	font-size: 2em;
+	text-align: center;
+	font-family: goldfish;
+}
+
+form
+{
+	margin-top: 1em;
+	line-height: 1em;
+}
+
+#main
+{
+	position: relative;
+}
+
+#main > #left
+{
+	width: 50%;
+	padding-right: 0.5em;
+	box-sizing: border-box;
+}
+
+#main > #right
+{
+	top: 0em;
+	right: 0em;
+	bottom: 0em;
+	width: 50%;
+	padding-left: 0.5em;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+fieldset
+{
+	padding: 0.5em;
+	border-width: 1px;
+	border-color: #111;
+	border-style: dashed;
+}
+
+.group:not(:last-child)
+{
+	margin-bottom: 1em;
+}
+
+.group > label
+{
+	cursor: pointer;
+}
+
+.group > input[type=text],
+.group > input[type=password],
+.group > select
+{
+	width: 100%;
+	padding: 0.5em;
+	box-sizing: border-box;
+	
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: #111;
+	border-style: solid;
+	
+	font-size: inherit;
+	font-family: inherit;
+	
+	transition: border-color 0.3s ease;
+}
+
+.group > input[type=text]:focus,
+.group > input[type=password]:focus,
+.group > select:focus
+{
+	outline: none;
+	border-color: #CC3333;
+}
+
+form > input[type=submit]
+{
+	display: block;
+	margin: 1em auto;
+	padding: 0.5em 1.5em;
+	
+	border: none;
+	border-radius: 3px;
+	
+	color: #EEE;
+	cursor: pointer;
+	font-size: inherit;
+	font-family: inherit;
+	background-color: #C33333;
+}
+
+@media(max-width: 640px)
+{
+	#main > #left
+	{
+		width: auto;
+		padding-right: 0em;
+		padding-bottom: 0.5em;
+	}
+	
+	#main > #right
+	{
+		width: auto;
+		position: static;
+		padding-top: 0.5em;
+		padding-left: 0em;
+	}
+}

@@ -1,0 +1,51 @@
+form > .group
+{
+	margin-bottom: 1em;
+}
+
+form > .group > label
+{
+	display: block;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+form > .group > input[type=text],
+form > .group > input[type=password]
+{
+	width: 100%;
+	padding: 0.5em;
+	box-sizing: border-box;
+	
+	border-width: 1px;
+	border-radius: 3px;
+	border-style: solid;
+	
+	font-size: inherit;
+	font-family: inherit;
+	
+	transition: border-color 0.3s ease;
+}
+
+form > .group > input[type=text]:focus,
+form > .group > input[type=password]:focus
+{
+	outline: none;
+	border-color: #CC3333;
+}
+
+form > input[type=submit]
+{
+	margin: 1em auto;
+	display: block;
+	padding: 0.5em 1.5em;
+	
+	border: none;
+	border-radius: 3px;
+	
+	color: #EEE;
+	cursor: pointer;
+	font-size: inherit;
+	font-family: inherit;
+	background-color: #C33333;
+}
