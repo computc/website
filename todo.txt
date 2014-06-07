@@ -1,2 +1,10 @@
 encrypt the passwords before saving them in the database!!
 request more information from the users during signup.
+work on aesthetics; better font set and better color scheme
+improve responsivity; header menu social list
+don't use obvious ids and classnames
+
+
+Be careful in adding to the sidebars! max-size must be preserved.
+Content must stretch from a minimum of 480, maximum of 1280
+font and color already implemented?
