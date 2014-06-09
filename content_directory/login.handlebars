@@ -1,22 +1,24 @@
-<link href="login.style.css" rel="stylesheet" type="text/css"/>
+<div id="container">
+	<link href="login.style.css" rel="stylesheet" type="text/css"/>
 
-{{#if message}}
-	<div>{{message}}</div>
-{{/if}}
+	{{#if message}}
+		<div>{{message}}</div>
+	{{/if}}
 
-<form action="/login" method="post">
-	
-	<div class="group">
-		<label for="email">Email</label>
-		<input name="email" id="email" type="text">
-	</div>
-	
-	<div class="group">
-		<label for="password">Password</label>
-		<input name="password" id="password" type="password">
-	</div>
+	<form action="/login" method="post">
+		
+		<div id="left" class="group">
+			<label for="email">Email</label>
+			<input name="email" id="email" type="text">
+		</div>
+		
+		<div id="right" class="group">
+			<label for="password">Password</label>
+			<input name="password" id="password" type="password">
+		</div>
 
-	<input type="submit" value="Log in">
-</form>
+		<input type="submit" value="Log in">
+	</form>
 
-<p>Don't have an account? You should <a href="/signup">Signup</a>!</p>
+	<p>Don't have an account? You should <a href="/signup">Signup</a>!</p>
+</div>

@@ -27,7 +27,7 @@ header > #banner > a
 	display: block;
 	
 	color: #111;
-	font-size: 246px;
+	font-size: 19vw;
 	font-weight: bold;
 	text-align: center;
 	letter-spacing: -2px;
@@ -56,26 +56,31 @@ header > #menu > a > .pagename
 	text-decoration: underline;
 }
 
-@media(max-width: 1280px)
+@media(min-width: 1196px)
 {
 	header > #banner > a
 	{
-		font-size: 19vw;
+		font-size: 227px;
 	}
 }
 
-@media(max-width: 640px)
+@media(max-width: 584px)
 {
 	header > #banner
 	{
 		margin: 1em auto;
 	}
+	
+	header > #menu > a
+	{
+		font-size: 1.25em;
+	}
 }
 
-@media(max-width: 480px)
+@media(max-width: 302px)
 {
 	header > #banner > a
 	{
-		font-size: 90px;
+		font-size: 58px;
 	}
 }

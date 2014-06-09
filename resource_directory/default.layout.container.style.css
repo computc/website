@@ -6,15 +6,15 @@
 #content
 {
 	padding: 0em 2em;
-	margin: 2em 186px;
-	min-height: 24.5em;
+	margin: 2em 10em;
+	min-height: 25.5em;
 }
 
 .menu
 {
 	top: 0px;
+	width: 8em;
 	bottom: 0px;
-	width: 150px;
 	padding: 1em;
 	position: absolute;
 	
@@ -25,16 +25,16 @@
 {
 	left: 0px;
 	
-	border-top-right-radius: 2px;
-	border-bottom-right-radius: 2px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
 }
 
 #right.menu
 {
 	right: 0px;
 	
-	border-top-left-radius: 2px;
-	border-bottom-left-radius: 2px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
 }
 
 .menu > ul
@@ -45,7 +45,7 @@
 
 .menu > ul:not(:last-child)
 {
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;
 }
 
 .menu > ul > li > b
@@ -67,15 +67,15 @@
 	text-decoration: underline;
 }
 
-@media(min-width: 1280px)
+@media(min-width: 1196px)
 {
 	.menu
 	{
-		border-radius: 2px;
+		border-radius: 4px;
 	}
 }
 
-@media(max-width: 960px)
+@media(max-width: 980px)
 {
 	#content
 	{
@@ -100,7 +100,7 @@
 		margin: auto 0.25em;
 	}
 	
-	#right.menu > ul > li:first-child
+	#right.menu > ul > li > b
 	{
 		display: none;
 	}
@@ -111,11 +111,11 @@
 	}
 }
 
-@media(max-width: 640px)
+@media(max-width: 800px)
 {
 	#content
 	{
-		margin: 1em auto;
+		margin: 1em 0em;
 		padding: 0em 1em;
 		min-height: inherit;
 	}
