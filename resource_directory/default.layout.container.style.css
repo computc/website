@@ -67,7 +67,7 @@
 	text-decoration: underline;
 }
 
-@media(min-width: 1196px)
+@media(min-width: 1186px)
 {
 	.menu
 	{
@@ -75,7 +75,7 @@
 	}
 }
 
-@media(max-width: 980px)
+@media(max-width: 1006px)
 {
 	#content
 	{
@@ -100,7 +100,7 @@
 		margin: auto 0.25em;
 	}
 	
-	#right.menu > ul > li > b
+	#right.menu > ul > li:first-child
 	{
 		display: none;
 	}
@@ -111,7 +111,7 @@
 	}
 }
 
-@media(max-width: 800px)
+@media(max-width: 826px)
 {
 	#content
 	{

@@ -56,7 +56,7 @@ header > #menu > a > .pagename
 	text-decoration: underline;
 }
 
-@media(min-width: 1196px)
+@media(min-width: 1188px)
 {
 	header > #banner > a
 	{
@@ -64,7 +64,7 @@ header > #menu > a > .pagename
 	}
 }
 
-@media(max-width: 584px)
+@media(max-width: 826px)
 {
 	header > #banner
 	{

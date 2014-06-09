@@ -23,7 +23,7 @@ form > #right.group
 	box-sizing: border-box;
 }
 
-@media(max-width: 584px)
+@media(max-width: 610px)
 {
 	form > .group
 	{

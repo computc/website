@@ -9,8 +9,8 @@
 body
 {
 	margin: auto;
-	min-width: 320px; min-width: 302px;
-	max-width: 1280px; max-width: 1196px;
+	min-width: 306px;
+	max-width: 1186px;
 	overflow-x: hidden;
 	
 	color: #111;
