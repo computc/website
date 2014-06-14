@@ -1,6 +1,5 @@
 @font-face
 {
-	format("truetype");
 	font-family: goldfish;
-	src: url("goldfish.ttf");
+	src: url("goldfish.ttf") format("truetype");
 }

@@ -18,7 +18,8 @@
 	padding: 1em;
 	position: absolute;
 	
-	background-color: #F5DA3F;
+	color: #EEE;
+	background-color: #CC3333;
 }
 
 #left.menu
@@ -57,12 +58,12 @@
 
 .menu > ul > li > a
 {
-	color: #CC3333;
+	color: #F2CCCC;
 	white-space: nowrap;
 	text-decoration: none;
 }
 
-.menu > ul > li > a > .pagename
+.menu > ul > li > a > .page-name
 {
 	text-decoration: underline;
 }

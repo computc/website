@@ -1,86 +1,87 @@
-header > #panel
+#panel
 {
-	padding: 8px;
+	padding: 0.5rem;
 	
+	color: #EEE;
 	font-size: 24px;
-	line-height: 1em;
 	text-align: right;
 	font-family: goldfish;
 	
-	background-color: #F5DA3F;
-	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
+	background-color: #CC3333;
 }
 
-header > #panel   a
+#panel > span > a
 {
 	color: inherit;
 }
 
-header > #banner
+header
 {
-	margin: 2em auto;
+	color: #EEE;
+	
+	overflow: auto;
+	
+	background-size: cover;
+	background-position: top;
+	background-image: url("images/chattanooga.jpg");
 }
 
-header > #banner > a
+header > h1
+{
+	margin: 2rem;
+	margin-bottom: 1rem;
+}
+
+header > h1 > a
 {
 	display: block;
-	
-	color: #111;
-	font-size: 19vw;
-	font-weight: bold;
-	text-align: center;
-	letter-spacing: -2px;
-	font-family: goldfish;
 	text-decoration: none;
+	
+	/*font-size: 19vw;
+	line-height: 40vw;
+	text-align: center;
+	font-family: goldfish;
+	text-shadow: 4px 4px #C33;*/
+}
+
+header > h1 > a > img
+{
+	width: 100%;
+	vertical-align: middle;
 }
 
 header > #menu
 {
+	margin: 1rem auto;
 	text-align: center;
 }
 
 header > #menu > a
 {
-	margin: auto 0.25em;
+	margin: auto 0.25rem;
 	
-	color: #CC3333;
-	font-size: 1.5em;
+	color: inherit;
+	font-size: 1.5rem;
 	white-space: nowrap;
 	font-family: goldfish;
 	text-decoration: none;
+	text-shadow: 2px 2px #CC3333;
 }
 
-header > #menu > a > .pagename
+header > #menu > a > .page-name
 {
 	text-decoration: underline;
 }
 
-@media(min-width: 1188px)
-{
-	header > #banner > a
-	{
-		font-size: 227px;
-	}
-}
-
 @media(max-width: 826px)
 {
-	header > #banner
+	header > h1
 	{
-		margin: 1em auto;
+		margin: 1rem;
 	}
 	
 	header > #menu > a
 	{
-		font-size: 1.25em;
-	}
-}
-
-@media(max-width: 302px)
-{
-	header > #banner > a
-	{
-		font-size: 58px;
+		font-size: 1.25rem;
 	}
 }

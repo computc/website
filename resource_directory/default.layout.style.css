@@ -1,9 +1,21 @@
-@import url("fonts/fontawesome.css");
+@import url("fonts/font-awesome.css");
 @import url("fonts/goldfish.css");
+@import url("fonts/open-sans.css");
 
 *
 {
 	margin: 0px;
+}
+
+html
+{
+	
+	color: #080808;
+	font-size: 18px;
+	font-family: open-sans, calibri, sans-serif;
+	
+	background-color: #F8F8F8;
+	background-image: url("images/grey.png");
 }
 
 body
@@ -12,12 +24,6 @@ body
 	min-width: 306px;
 	max-width: 1186px;
 	overflow-x: hidden;
-	
-	color: #111;
-	font-size: 18px;
-	font-family: calibri;
-	
-	background-color: #F8F8F8;
 }
 
 hr
@@ -28,6 +34,6 @@ hr
 	
 	border: none;
 	border-top-width: 3px;
-	border-top-color: #111;
 	border-top-style: dashed;
+	border-top-color: #080808;
 }
