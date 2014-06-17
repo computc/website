@@ -1,0 +1,58 @@
+#contactform {
+	display: inline;
+	float: left;
+	margin-right: 2em;
+	padding-bottom: 25px;
+	padding-right: 5%
+}
+
+#contactformblurb {
+	display: inline;
+	float: left;
+	padding-bottom: 25px;
+}
+
+#contactformblurb > p {
+	padding-top: 25px;
+	max-width:300px;
+}
+
+.contactblock {
+	clear: both;
+	width: 70%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.contactpic {
+	display: inline;
+	float: left;
+}
+
+.contactinfo {
+	display: inline;
+	float: left;
+	padding-left: 2em;
+	height:100px;
+}
+
+.sociallinks {
+	display: inline;
+	float: right;
+	padding-left: 2em;
+	height: 100px;
+	font-size: 40px;
+	color: #C8C8C8;
+}
+
+.sociallinks > a {
+	color: #3952A6;
+}
+
+.innerbreak {
+	padding: 50px;
+}
+
+.groupbreak {
+	padding: 25px;
+}
