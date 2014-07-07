@@ -8,24 +8,23 @@ module.exports = function(database)
 		{
 			if(error)
 			{
-				return done(error);
+				console.log(error);
+				return done(null);
 			}
 			
-			if(user)
+			if(!user)
 			{
-				if(bcrypt.compareSync(password, user.password))
-				{
-					return done(null, {utc_id: user.utc_id});
-				}
-				else
-				{
-					return done(null, false, request.flash("message", "Incorrect password."));
-				}
+				request.flash("message", "Unavailable utcid.");
+				return done(null);
 			}
-			else
+			
+			if(!bcrypt.compareSync(password, user.password))
 			{
-				return done(null, false, request.flash("message", "Unavailable utcid."));
+				request.flash("message", "Incorrect password.");
+				return done(null);
 			}
+			
+			return done(null, {utc_id: user.utc_id, first_name: user.first_name});
 		});
 	}
 }

@@ -2,46 +2,15 @@ b
 {
 	display: block;
 	
-	font-size: 2em;
+	font-size: 2rem;
 	text-align: center;
 	font-family: goldfish;
 }
 
 form
 {
-	margin-top: 1em;
-	line-height: 1em;
-}
-
-#main
-{
-	position: relative;
-}
-
-#main > #left
-{
-	width: 50%;
-	padding-right: 0.5em;
-	box-sizing: border-box;
-}
-
-#main > #right
-{
-	top: 0em;
-	right: 0em;
-	bottom: 0em;
-	width: 50%;
-	padding-left: 0.5em;
-	position: absolute;
-	box-sizing: border-box;
-}
-
-fieldset
-{
-	padding: 0.5em;
-	border-width: 1px;
-	border-color: #111;
-	border-style: dashed;
+	margin-top: 1rem;
+	line-height: 1rem;
 }
 
 .group:not(:last-child)
@@ -95,22 +64,4 @@ form > input[type=submit]
 	font-size: inherit;
 	font-family: inherit;
 	background-color: #C33333;
-}
-
-@media(max-width: 640px)
-{
-	#main > #left
-	{
-		width: auto;
-		padding-right: 0em;
-		padding-bottom: 0.5em;
-	}
-	
-	#main > #right
-	{
-		width: auto;
-		position: static;
-		padding-top: 0.5em;
-		padding-left: 0em;
-	}
 }

@@ -1,24 +1,26 @@
-<div id="container">
-	<link href="login.style.css" rel="stylesheet" type="text/css"/>
 
-	{{#if message}}
-		<div>{{message}}</div>
-	{{/if}}
+<link href="login.style.css" rel="stylesheet" type="text/css"/>
 
-	<form action="/login" method="post">
-		
-		<div id="left" class="group">
-			<label for="utc_id">UTC ID</label>
-			<input name="utc_id" id="utc_id" type="text">
-		</div>
-		
-		<div id="right" class="group">
-			<label for="password">Password</label>
-			<input name="password" id="password" type="password">
-		</div>
+{{#if message}}
+	<div>{{message}}</div>
+{{/if}}
 
-		<input type="submit" value="Log in">
-	</form>
+<form action="/login" method="post">
+	
+	<div id="left" class="group">
+		<label for="utc_id">UTC ID</label>
+		<input name="utc_id" id="utc_id" type="text">
+	</div>
+	
+	<div id="right" class="group">
+		<label for="password">Password</label>
+		<input name="password" id="password" type="password">
+	</div>
 
-	<p>Don't have an account? You should <a href="/signup">Signup</a>!</p>
+	<input type="submit" value="Log in">
+</form>
+
+<div>
+	Oh? You don't have an account yet?
+	<a href="/signup">Click here to signup!</a>
 </div>

@@ -10,8 +10,7 @@ module.exports = function(passport, database)
 	route.post("/login", passport.authenticate("local-login",
 	{
 		successRedirect: "/profile",
-		failureRedirect: "/login",
-		failureFlash: true
+		failureRedirect: "/login"
 	}));
 	
 	route.get("/signup", function(request, response, next)
@@ -22,8 +21,7 @@ module.exports = function(passport, database)
 	route.post("/signup", passport.authenticate("local-signup",
 	{
 		successRedirect: "/profile",
-		failureRedirect: "/signup",
-		failureFlash: true
+		failureRedirect: "/signup"
 	}));
 	
 	route.get("/logout", function(request, response, next)

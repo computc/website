@@ -5,46 +5,7 @@ form
 
 form > .group
 {
-	width: 50%;
-}
-
-form > #left.group
-{
-	padding-right: 0.5em;
-	box-sizing: border-box;
-}
-
-form > #right.group
-{
-	top: 0px;
-	right: 0px;
-	position: absolute;
-	padding-left: 0.5em;
-	box-sizing: border-box;
-}
-
-@media(max-width: 610px)
-{
-	form > .group
-	{
-		width: 100%;
-	}
-	
-	form > #left.group
-	{
-		padding-right: 0em;
-	}
-	
-	form > #right.group
-	{
-		position: static;
-		padding-left: 0em;
-	}
-}
-
-form > .group
-{
-	margin-bottom: 1em;
+	margin-bottom: 1rem;
 }
 
 form > .group > label

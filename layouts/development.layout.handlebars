@@ -13,8 +13,8 @@
 		<div id="panel">
 			{{#if user}}
 				<span>
-					<a href="/profile">{{user.utc_id}}</a>
-					<!--<a href="/logout">Logout</a>?-->
+					<a href="/profile/{{user.utc_id}}">{{user.first_name}}</a>
+					<a href="/logout">Logout</a>
 				</span>
 			{{else}}
 				<span>

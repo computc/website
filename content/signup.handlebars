@@ -1,70 +1,36 @@
 <link href="signup.style.css" rel="stylesheet" type="text/css"/>
 
-<b>
-	Signup!
-</b>
+<b>Signup!</b>
 
 {{#if message}}
 	<div>{{message}}</div>
 {{/if}}
 
 <form action="/signup" method="post">
-	<div id="main">
-		<div id="left">
-			<!--<div class="group">
-				<label for="firstname">Firstname</label>
-				<input name="firstname" id="firstname" type="text">
-			</div>
-			<div class="group">
-				<label for="lastname">Lastname</label>
-				<input name="lastname" id="lastname" type="text">
-			</div>-->
-			<div class="group">
-				<label for="utc_id">UTC ID</label>
-				<input name="utc_id" id="utc_id" type="text">
-			</div>
-			<div class="group">
-				<label for="password">Password</label>
-				<input name="password" id="password" type="password">
-			</div>
-			<div class="group">
-				<label for="password-again">Password again</label>
-				<input id="password-again" type="password">
-			</div>
-		</div>
-		<div id="right">
-			<!--<div class="group">
-				<label for="username">Username</label>
-				<input name="username" id="username" type="text">
-			</div>
-			<div class="group">
-				<label for="email">Email</label>
-				<input name="email" id="email" type="text">
-			</div>
-			<div class="group">
-				<label for="major">UTC Major</label>
-				<select id="major" name="major">
-					<option value="CompSci InfoSec">Computer Science, Information Security</option>
-					<option value="CompSci SciApps">Computer Science, Scientific Applications</option>
-					<option value="CompSci StemEd">Computer Science, Technology Education</option>
-					<option value="CompSci SoftSyst">Computer Science, Software Systems</option>
-					<option value="CompEngr">Computer Engineering</option>
-					<option value="PreCompSci">Pre Computer Science</option>
-					<option value="Other">None of these</option>
-				</select>
-			</div>
-			<div class="group">
-				<label for="graduation">UTC Graduation</label>
-				year and season of graduation, or pffft i've already graduated.
-			</div>-->
-		</div>
+	<div class="group">
+		<label for="utc_id">UTC ID</label>
+		<input name="utc_id" id="utc_id" type="text">
 	</div>
-	
-	do you agree and understand?
+	<div class="group">
+		<label for="password">Password</label>
+		<input name="password" id="password" type="password">
+	</div>
+	<div class="group">
+		<label for="password_again">Password again</label>
+		<input name="password_again" id="password-again" type="password">
+	</div>
+	<div class="group">
+		<label for="first_name">First Name</label>
+		<input name="first_name" id="first_name" type="text">
+	</div>
+	<div class="group">
+		<label for="last_name">Last Name</label>
+		<input name="last_name" id="last_name" type="text">
+	</div>
 	<input type="submit" value="Signup"/>
 </form>
 
-<p>
-	Do you already have an account? Click
-	here to <a href="/login">login</a>!
-</p>
+<div>
+	Oh! You already have an account?
+	<a href="/login">Click here to login!</a>
+</div>
