@@ -1,8 +1,8 @@
 encrypt the passwords before saving them in the database!!
-request more information from the users during signup.
-work on aesthetics; better font set and better color scheme
-improve responsivity; header menu social list
-don't use obvious ids and classnames
+use utc_id as the primary key instead of email address.
+work on aesthetics; better font set and better color scheme.
+improve responsivity; header menu social list.
+don't use obvious ids and classnames to avoid collisions.
 
 
 Be careful in adding to the sidebars! max-size must be preserved.

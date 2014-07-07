@@ -1,2 +1,2 @@
 call npm install
-call node server
+call node computc
