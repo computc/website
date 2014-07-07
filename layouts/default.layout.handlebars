@@ -5,10 +5,10 @@
 		<title>CompUTC</title>
 		<meta charset="UTF-8"/>
 		
-		<link href="default.layout.style.css" rel="stylesheet" type="text/css"/>
-		<link href="default.layout.header.style.css" rel="stylesheet" type="text/css"/>
-		<link href="default.layout.container.style.css" rel="stylesheet" type="text/css"/>
-		<link href="default.layout.footer.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.layout.header.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.layout.container.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.layout.footer.style.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		
@@ -16,7 +16,7 @@
 		<div id="panel">
 			{{#if user}}
 				<span id="logout">
-					<a href="/profile">{{user.email}}</a>!
+					<a href="/profile">{{user.utc_id}}</a>!
 					<a href="/logout">Logout</a>?
 				</span>
 			{{else}}
@@ -30,7 +30,7 @@
 		<header>
 			
 			<h1>
-				<a href="/"><img src="images/logo.png" alt="CompUTC"/></a>
+				<a href="/"><img src="/images/logo.png" alt="CompUTC"/></a>
 			</h1>
 			
 			<div id="menu">

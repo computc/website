@@ -1,8 +1,10 @@
 module.exports = function(database)
 {
-	return function(request, email, password, done)
+	var bcrypt = require("bcrypt-nodejs");
+	
+	return function(request, utc_id, password, done)
 	{
-		database.users.findOne({email: email}, function(error, user)
+		database.users.findOne({utc_id: utc_id}, function(error, user)
 		{
 			if(error)
 			{
@@ -11,14 +13,14 @@ module.exports = function(database)
 			
 			if(user)
 			{
-				return done(null, false, request.flash("message", "That email is already taken."));
+				return done(null, false, request.flash("message", utc_id + " already been registerd."));
 			}
 			else
 			{
-				var user = {email: email, password: password};
-				database.users.insert(user);
+				password = bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 				
-				return done(null, user);
+				database.users.insert({utc_id: utc_id, password: password});
+				return done(null, {utc_id: utc_id});
 			}
 		});
 	}

@@ -5,9 +5,25 @@
 		<title>CompUTC</title>
 		<meta charset="UTF-8"/>
 		
-		<link href="default.layout.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/development.layout.style.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
+		
+		<div id="panel">
+			{{#if user}}
+				<span>
+					<a href="/profile">{{user.utc_id}}</a>
+					<!--<a href="/logout">Logout</a>?-->
+				</span>
+			{{else}}
+				<span>
+					<a href="/signup">Signup</a> or 
+					<a href="/login">Login</a>!
+				</span>
+			{{/if}}
+			<span class="fa fa-bars"></span>
+		</div>
 		
 		{{{body}}}
 		

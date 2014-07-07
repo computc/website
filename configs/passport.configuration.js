@@ -1,1 +1,1 @@
-module.exports = {usernameField: "email", passwordField: "password", passReqToCallback: true}
+module.exports = {usernameField: "utc_id", passwordField: "password", passReqToCallback: true}

@@ -1,8 +1,10 @@
 module.exports = function(database)
 {
-	return function(request, email, password, done)
+	var bcrypt = require("bcrypt-nodejs");
+	
+	return function(request, utc_id, password, done)
 	{
-		database.users.findOne({email: email}, function(error, user)
+		database.users.findOne({utc_id: utc_id}, function(error, user)
 		{
 			if(error)
 			{
@@ -11,18 +13,18 @@ module.exports = function(database)
 			
 			if(user)
 			{
-				if(user.password == password)
+				if(bcrypt.compareSync(password, user.password))
 				{
-					return done(null, user);
+					return done(null, {utc_id: user.utc_id});
 				}
 				else
 				{
-					return done(null, false, request.flash("message", "Oops! Wrong password."));
+					return done(null, false, request.flash("message", "Incorrect password."));
 				}
 			}
 			else
 			{
-				return done(null, false, request.flash("message", "No user found."));
+				return done(null, false, request.flash("message", "Unavailable utcid."));
 			}
 		});
 	}

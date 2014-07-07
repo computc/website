@@ -2,7 +2,7 @@ module.exports = function(request, response, next)
 {
 	if(request.isAuthenticated())
 	{
-		response.locals.me = request.user;
+		response.locals.user = request.user;
 	}
 	
 	next();

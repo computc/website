@@ -28,7 +28,7 @@ application.use(require("connect-flash")());
 ////////////////////databasing////////////////////
 /////////////////////////////////////////////////
 
-database.users.drop();
+require("./placeholders.js")(database);
 
 ///////////////////////////////////////////////////
 ////////////////////templating////////////////////
@@ -70,8 +70,6 @@ application.use(require("./middleware/get-user-locals.js"));
 application.use("/", require("./routes/home.route.js")());
 application.use("/", require("./routes/login.route.js")(passport, database));
 application.use("/profile", require("./routes/profile.route.js")(database));
-
-application.get("/logout", function(request, response) {request.logout(); response.redirect("/");});
 application.get("*", function(request, response) {response.render("error");});
 
 ///////////////////////////////////////////////////
