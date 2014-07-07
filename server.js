@@ -1,32 +1,60 @@
 var express = require("express");
-var server = express();
+
+express = express();
 
 //////////////////////////////////////////////
 //////////////////TEMPLATING/////////////////
 ////////////////////////////////////////////
 
 var handlebars = require("express3-handlebars");
-handlebars = handlebars(require("./handlebars.config"));
+handlebars = handlebars(require("./handlebars.options.js"));
 
-server.engine("handlebars", handlebars);
-server.set("view engine", "handlebars");
-server.set("views", "content_directory/");
+express.engine("handlebars", handlebars);
+express.set("view engine", "handlebars");
+express.set("views", "content_directory/");
+
+//////////////////////////////////////////////
+//////////////////DATABASING/////////////////
+////////////////////////////////////////////
+
+var mongo = require("mongojs");
+mongo = mongo("computc", ["users"]);
+
+mongo.users.drop();
+
+//////////////////////////////////////////////
+////////////////AUTHENTICATING///////////////
+////////////////////////////////////////////
+
+var passport = require("passport");
+require("./passport.config.js")(passport, mongo);
+
+//////////////////////////////////////////////
+/////////////////CONFIGURING/////////////////
+////////////////////////////////////////////
+
+var connect = require("connect");
+var flash = require("connect-flash");
+
+express.use(flash());
+express.use(connect.json());
+express.use(connect.urlencoded());
+express.use(connect.cookieParser());
+
+express.use(connect.session({secret: "thing"}));
+express.use(passport.initialize());
+express.use(passport.session());
 
 //////////////////////////////////////////////
 ///////////////////ROUTING///////////////////
 ////////////////////////////////////////////
 
-var router = require("./router.js");
-
-server.get("/", router.home);
-server.get("/*", router.content);
-server.get("/*", router.resource);
-server.get("/*", router.error);
+require("./router.config.js")(express, passport, mongo);
 
 //////////////////////////////////////////////
 //////////////////LISTENING//////////////////
 ////////////////////////////////////////////
 
-var port = 21483;
-server.listen(port);
+var port = process.env.PORT || 21483;
 console.log("127.0.0.1:" + port);
+express.listen(port);

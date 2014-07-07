@@ -5,9 +5,6 @@
 		<title>CompUTC</title>
 		<meta charset="UTF-8"/>
 		
-		<link href="fonts/fontawesome.css" rel="stylesheet" type="text/css"/>
-		<link href="fonts/goldfish.css" rel="stylesheet" type="text/css"/>
-		
 		<link href="default.layout.style.css" rel="stylesheet" type="text/css"/>
 		<link href="default.layout.header.style.css" rel="stylesheet" type="text/css"/>
 		<link href="default.layout.container.style.css" rel="stylesheet" type="text/css"/>
@@ -15,218 +12,205 @@
 	</head>
 	<body>
 		
-		<div id="frame">
+		
+		<div id="panel">
+			{{#if user}}
+				<span id="logout">
+					<a href="/profile">{{user.email}}</a>!
+					<a href="/logout">Logout</a>?
+				</span>
+			{{else}}
+				<span id="login">
+					<a href="/signup">Signup</a> or 
+					<a href="/login">Login</a>!
+				</span>
+			{{/if}}
+			<span class="fa fa-bars"></span>
+		</div>
+		<header>
 			
-			<header>
-				
-				<div id="user">
-					{{#if user}}
-						<div id="logout">
-							<b>
-								Welcome, {{user.name}}!
-							</b>
-							<a href="/logout">
-								Logout?
-							</a>
-						</div>
-					{{else}}
-						<form id="login">
-							<div class="credential">
-								<label for="username">Username:</label>
-								<input type="text" id="username"/>
-							</div>
-							<div class="credential">
-								<label for="password">Password:</label>
-								<input type="password" id="password"/>
-							</div>
-						</form>
-					{{/if}}
-				</div>
-				
-				<div id="title">
-					<a href="/">CompUTC</a>
-				</div>
-				
-				<div id="navigation">
-					<a href="/">
-						<span class="fa fa-home"></span>
-						<span class="pagetitle">Home</span>
-					</a>
-					<a href="/about">
-						<span class="fa fa-smile-o"></span>
-						<span class="pagetitle">About</span>
-					</a>
-					<a href="/events">
-						<span class="fa fa-calendar"></span>
-						<span class="pagetitle">Events</span>
-					</a>
-					<a href="/contact">
-						<span class="fa fa-comment-o"></span>
-						<span class="pagetitle">Contact</span>
-					</a>
-				</div>
-				
-			</header>
+			<h1>
+				<a href="/"><img src="images/logo.png" alt="CompUTC"/></a>
+			</h1>
 			
-			<div id="container">
+			<div id="menu">
+				<a href="/">
+					<span class="fa fa-home"></span>
+					<span class="page-name">Home</span>
+				</a>
+				<a href="/about">
+					<span class="fa fa-smile-o"></span>
+					<span class="page-name">About</span>
+				</a>
+				<a href="/events">
+					<span class="fa fa-calendar"></span>
+					<span class="page-name">Events</span>
+				</a>
+				<a href="/contact">
+					<span class="fa fa-comment-o"></span>
+					<span class="page-name">Contact</span>
+				</a>
+			</div>
+			
+		</header>
+		
+		<div id="container">
+			
+			<div id="content">
+				{{{body}}}
+			</div>
+			
+			<div class="menu" id="left">
 				
-				<div id="content">
-					{{{body}}}
-				</div>
+				<ul>
+					<li>
+						<b>Suborgs</b>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fa fa-cogs"></span>
+							<span class="page-name">Tutoring</span>
+						</a>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fa fa-lock"></span>
+							<span class="page-name">Info Security</span>
+						</a>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fa fa-cube"></span>
+							<span class="page-name">Robotics</span>
+						</a>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fa fa-gamepad"></span>
+							<span class="page-name">Game Dev</span>
+						</a>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fa fa-code"></span>
+							<span class="page-name">Competitions</span>
+						</a>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fa fa-cloud"></span>
+							<span class="page-name">Web Design</span>
+						</a>
+					</li>
+					<li>
+				</ul>
 				
-				<div class="menu" id="left">
-					
-					<ul>
-						<li>
-							<b>Suborgs</b>
-						</li>
-						<li>
-						</li>
-						<li>
-							<a href="/">
-								<span class="fa fa-cogs"></span>
-								<span class="pagetitle">Tutoring</span>
-							</a>
-						</li>
-						<li>
-							<a href="/">
-								<span class="fa fa-lock"></span>
-								<span class="pagetitle">Cyber Security</span>
-							</a>
-						</li>
-						<li>
-							<a href="/">
-								<span class="fa fa-cube"></span>
-								<span class="pagetitle">Robotics</span>
-							</a>
-						</li>
-						<li>
-							<a href="/">
-								<span class="fa fa-gamepad"></span>
-								<span class="pagetitle">Game Dev</span>
-							</a>
-						</li>
-						<li>
-							<a href="/">
-								<span class="fa fa-code"></span>
-								<span class="pagetitle">Competitions</span>
-							</a>
-						</li>
-						<li>
-							<a href="/">
-								<span class="fa fa-cloud"></span>
-								<span class="pagetitle">Web Design</span>
-							</a>
-						</li>
-						<li>
-					</ul>
-					
-					<ul>
-						<li>
-							<b>Links</b>
-						</li>
-						<li>
-							<a target="_blank" href="http://www.utc.edu/computer-science">
-								<span class="fa fa-university"></span>
-								<span class="pagetitle">UTC Page</span>
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="http://www.computer.org/">
-								<span class="fa fa-asterisk"></span>
-								<span class="pagetitle">IEEECS Website</span>
-							</a>
-						</li>
-					</ul>
-					
-					<ul>
-						<li>
-							<b>Pages</b>
-						</li>
-						<li>
-							<a href="/">
-								<span class="fa fa-home"></span>
-								<span class="pagetitle">Home</span>
-							</a>
-						</li>
-						<li>
-							<a href="/about">
-								<span class="fa fa-smile-o"></span>
-								<span class="pagetitle">About</span>
-							</a>
-						</li>
-						<li>
-							<a href="/events">
-								<span class="fa fa-calendar"></span>
-								<span class="pagetitle">Events</span>
-							</a>
-						</li>
-						<li>
-							<a href="/contact">
-								<span class="fa fa-comment-o"></span>
-								<span class="pagetitle">Contact</span>
-							</a>
-						</li>
-					</ul>
-					
-				</div>
+				<ul>
+					<li>
+						<b>Links</b>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.utc.edu/computer-science">
+							<span class="fa fa-university"></span>
+							<span class="page-name">UTC Page</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.computer.org/">
+							<span class="fa fa-asterisk"></span>
+							<span class="page-name">IEEECS Website</span>
+						</a>
+					</li>
+				</ul>
 				
-				<div class="menu" id="right">
-					<ul>
-						<li>
-							<b>Social</b>
-						</li>
-						<li>
-							<a target="_blank" href="https://twitter.com/computcorg">
-								<span class="fa fa-twitter-square"></span>
-								<span class="pagetitle">Twitter</span>
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.facebook.com/groups/ajeezy">
-								<span class="fa fa-facebook-square"></span>
-								<span class="pagetitle">Facebook</span>
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://github.com/computc">
-								<span class="fa fa-github-square"></span>
-								<span class="pagetitle">Github</span>
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.linkedin.com/groups/CompUTC-6700431">
-								<span class="fa fa-linkedin-square"></span>
-								<span class="pagetitle">Linkedin</span>
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.youtube.com/channel/UCHXYDL4XvpYNLjiVnsLGUbg">
-								<span class="fa fa-youtube-square"></span>
-								<span class="pagetitle">Youtube</span>
-							</a>
-						</li>
-						<li>
-							<a target="_blank" href="http://steamcommunity.com/groups/computc">
-								<span class="fa fa-steam-square"></span>
-								<span class="pagetitle">Steam</span>
-							</a>
-						</li>
-					</ul>
-				</div>
+				<ul>
+					<li>
+						<b>Pages</b>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fa fa-home"></span>
+							<span class="page-name">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="/about">
+							<span class="fa fa-smile-o"></span>
+							<span class="page-name">About</span>
+						</a>
+					</li>
+					<li>
+						<a href="/events">
+							<span class="fa fa-calendar"></span>
+							<span class="page-name">Events</span>
+						</a>
+					</li>
+					<li>
+						<a href="/contact">
+							<span class="fa fa-comment-o"></span>
+							<span class="page-name">Contact</span>
+						</a>
+					</li>
+				</ul>
 				
 			</div>
 			
-			<footer>
+			<div class="menu" id="right">
 				
-				<small>
-					Gee! You read all the way to the bottom of the page!
-					You must have a lot of time to waste on the internet. :D
-				</small>
+				<ul>
+					<li>
+						<b>Social</b>
+					</li>
+					<li>
+						<a target="_blank" href="https://twitter.com/computcorg">
+							<span class="fa fa-twitter-square"></span>
+							<span class="page-name">Twitter</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.facebook.com/groups/ajeezy">
+							<span class="fa fa-facebook-square"></span>
+							<span class="page-name">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://github.com/computc">
+							<span class="fa fa-github-square"></span>
+							<span class="page-name">Github</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.linkedin.com/groups/CompUTC-6700431">
+							<span class="fa fa-linkedin-square"></span>
+							<span class="page-name">Linkedin</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/channel/UCHXYDL4XvpYNLjiVnsLGUbg">
+							<span class="fa fa-youtube-square"></span>
+							<span class="page-name">Youtube</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://steamcommunity.com/groups/computc">
+							<span class="fa fa-steam-square"></span>
+							<span class="page-name">Steam</span>
+						</a>
+					</li>
+				</ul>
 				
-			</footer>
+			</div>
 			
 		</div>
+		
+		<footer>
+			
+			<small>
+				Gee! You read all the way to the bottom of the page!
+				You must have a lot of time to waste on the internet.
+			</small>
+			
+		</footer>
 		
 	</body>
 </html>

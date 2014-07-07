@@ -2,14 +2,17 @@ footer
 {
 	padding: 1em;
 	
-	background-color: #F5DA3F;
+	color: #EEE;
+	background-color: #CC3333;
 }
 
 footer > small
 {
 	margin: auto;
-	width: 320px;
 	display: block;
+	width: 50%;
+	min-width: 17em;
+	max-width: 24em;
 	
 	font-size: 12px;
 	line-height: 1em;
