@@ -1,0 +1,46 @@
+header
+{
+	height: 2.5rem;
+	background-color: #CC3333;
+}
+
+header > h1
+{
+	float: left;
+	height: 2.5rem;
+	text-align: center;
+	display: inline-block;
+	
+	background-size: cover;
+	background-color: lightblue;
+	background-image: url("/images/chattanooga.jpg");
+}
+
+header > h1 > a > img
+{
+	height: 1.5rem;
+	padding: 0.5rem;
+}
+
+header > div
+{
+	padding: 0.5rem;
+	
+	color: #EEE;
+	line-height: 1em;
+	font-size: 1.5rem;
+	text-align: right;
+	font-family: goldfish;
+	
+	white-space: nowrap;
+}
+
+header > div > span > a
+{
+	color: inherit;
+}
+
+#body
+{
+	padding: 2rem;
+}

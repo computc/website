@@ -9,14 +9,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="693.42523"
-   height="147.04729"
-   id="svg2985"
+   width="693.15161"
+   height="147.15167"
+   id="svg3144"
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="logo.svg">
   <defs
-     id="defs2987" />
+     id="defs3146" />
   <sodipodi:namedview
      inkscape:document-units="mm"
      pagecolor="#ffffff"
@@ -24,11 +24,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2279853"
-     inkscape:cx="298.4619"
-     inkscape:cy="45.335337"
-     inkscape:current-layer="layer1"
-     id="namedview2989"
+     inkscape:zoom="1.7366335"
+     inkscape:cx="267.00097"
+     inkscape:cy="106.0591"
+     inkscape:current-layer="g3106"
+     id="namedview3148"
      showgrid="false"
      units="mm"
      fit-margin-top="0"
@@ -41,14 +41,14 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata2991">
+     id="metadata3150">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,134 +56,20 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-98.883184,-358.9868)">
-    <text
-       xml:space="preserve"
-       style="font-size:39.69018936px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cc3333;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="101.65004"
-       y="478.22479"
-       id="text2994"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0076385,0.9924194)"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"><tspan
-         sodipodi:role="line"
-         id="tspan2996"
-         x="101.65004"
-         y="478.22479"
-         style="font-size:142.88467407px;font-weight:normal;fill:#cc3333;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:39.69018936px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cc3333;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="101.65004"
-       y="476.43961"
-       id="text2994-5"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0076385,0.99241939)"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2996-5"
-         x="101.65004"
-         y="476.43961"
-         style="font-size:142.88467407px;font-weight:normal;fill:#cc3333;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:39.71064377px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cc3333;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="103.355"
-       y="478.47125"
-       id="text2994-1"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0081578,0.99190822)"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2996-7"
-         x="103.355"
-         y="478.47125"
-         style="font-size:142.95831299px;font-weight:normal;fill:#cc3333;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:39.69018936px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cc3333;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="103.40826"
-       y="476.43961"
-       id="text2994-11"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0076385,0.9924194)"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2996-52"
-         x="103.40826"
-         y="476.43961"
-         style="font-size:142.88467407px;font-weight:normal;fill:#cc3333;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:39.69018936px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eeeeee;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="98.133591"
-       y="474.65442"
-       id="text2994-7"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0076385,0.9924194)"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2996-6"
-         x="98.133591"
-         y="474.65442"
-         style="font-size:142.88467407px;font-weight:normal;fill:#eeeeee;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:39.69018936px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eeeeee;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="98.133591"
-       y="472.8692"
-       id="text2994-5-1"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0076385,0.9924194)"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2996-5-4"
-         x="98.133591"
-         y="472.8692"
-         style="font-size:142.88467407px;font-weight:normal;fill:#eeeeee;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:39.71064377px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eeeeee;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="99.840347"
-       y="474.89902"
-       id="text2994-1-2"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0081578,0.99190821)"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2996-7-3"
-         x="99.840347"
-         y="474.89902"
-         style="font-size:142.95831299px;font-weight:normal;fill:#eeeeee;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:39.69018936px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#eeeeee;fill-opacity:1;stroke:none;font-family:'Volter (Goldfish)';-inkscape-font-specification:'Volter (Goldfish)'"
-       x="99.891808"
-       y="472.8692"
-       id="text2994-11-2"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0076385,0.9924194)"
-       inkscape:export-filename="C:\Users\Andrew\Projects\CompUTC\resource_directory\images\logo.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><tspan
-         sodipodi:role="line"
-         id="tspan2996-52-2"
-         x="99.891808"
-         y="472.8692"
-         style="font-size:142.88467407px;font-weight:normal;fill:#eeeeee;fill-opacity:1;-inkscape-font-specification:'Volter (Goldfish)'">CompUTC</tspan></text>
+     transform="translate(-203.91456,-283.56307)">
+    <g
+       id="g3106"
+       transform="translate(106.53532,-74.765182)">
+      <path
+         style="fill:#cb3333"
+         d="m 420.53088,449.58691 c 0,-50.04463 0.16551,-55.95653 1.58179,-56.5 2.06466,-0.79229 60.77176,-0.79229 62.83642,0 1.24388,0.47732 1.58179,2.17732 1.58179,7.95793 l 0,7.35095 7.75,0.29207 7.75,0.29206 0.26747,24.75 0.26747,24.75 -8.01747,0 -8.01747,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -0.86998,0.33385 -11.66998,0.60699 -24,0.60699 l -22.41821,0 0,15.5 0,15.5 -9,0 -9,0 0,-55.89301 z m 63.5,-16.10699 0,-22.5 -22.75,-0.26877 -22.75,-0.26878 0,23.03755 0,23.03755 22.75,-0.26878 22.75,-0.26877 0,-22.5 z m -366.25,40.33772 c -0.8423,-0.33988 -1.25,-2.92339 -1.25,-7.92105 l 0,-7.41667 -8,0 -8,0 0,-40.5 0,-40.5 8,0 8,0 0,-8 0,-8 25,0 25,0 0,8 0,8 8,0 8,0 0,8.39301 c 0,9.64753 0.038,9.60699 -9,9.60699 -8.91471,0 -9,-0.0816 -9,-8.60699 l 0,-7.39301 -23,0 -23,0 0,38.5 0,38.5 23,0 23,0 0,-8 0,-8 9,0 9,0 0,9 0,9 -8,0 -8,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -1.88475,0.72325 -45.3651,0.67228 -47.16821,-0.0553 z m 96,0 c -0.8423,-0.33988 -1.25,-2.92339 -1.25,-7.92105 l 0,-7.41667 -8,0 -8,0 0,-25 0,-25 8,0 8,0 0,-7.39301 c 0,-5.81897 0.33678,-7.52225 1.58179,-8 2.06328,-0.79176 44.77314,-0.79176 46.83642,0 1.24388,0.47732 1.58179,2.17732 1.58179,7.95793 l 0,7.35095 7.75,0.29207 7.75,0.29206 0.26747,24.75 0.26747,24.75 -8.01747,0 -8.01747,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -1.88475,0.72325 -45.3651,0.67228 -47.16821,-0.0553 z m 46.51877,-40.08772 -0.26877,-22.75 -22.75,-0.26877 -22.75,-0.26878 0,23.01878 0,23.01877 23.01877,0 23.01878,0 -0.26878,-22.75 z m 32.8979,40.08333 c -0.36667,-0.36666 -0.66667,-18.54352 -0.66667,-40.39301 0,-35.30274 0.17614,-39.79393 1.58179,-40.33333 2.05698,-0.78934 91.21818,-0.76728 94.16821,0.0233 2.07425,0.55588 2.25,1.1764 2.25,7.94428 l 0,7.3413 7.75,0.29207 7.75,0.29206 0.26429,31.93215 c 0.20594,24.88076 -0.0149,32.10937 -1,32.73469 -1.62723,1.03292 -13.87924,1.0471 -15.49955,0.0179 -0.92722,-0.58894 -1.30128,-8.50257 -1.5,-31.73468 l -0.26474,-30.95006 -14.75,-0.27673 -14.75,-0.27674 0,31.50768 0,31.50769 -2.28085,0.57245 c -1.25447,0.31486 -5.19197,0.43593 -8.75,0.26906 l -6.46915,-0.30341 -0.5,-31.5 -0.5,-31.5 -14.75,-0.27673 -14.75,-0.27674 0,31.41975 c 0,27.7282 -0.18585,31.49106 -1.58179,32.02673 -2.14264,0.82221 -14.91806,0.77381 -15.75154,-0.0597 z m 240.58333,0.004 c -0.8423,-0.33949 -1.25,-2.923 -1.25,-7.92066 l 0,-7.41667 -8,0 -8,0 0,-48.5 0,-48.5 9,0 9,0 0,47.5 0,47.5 22.5,0 22.5,0 0.0153,-46.25 c 0.008,-25.4375 0.38447,-46.83189 0.83566,-47.5431 0.59048,-0.93077 3.17805,-1.21097 9.23468,-1 l 8.41436,0.2931 0.2596,48.25 0.25961,48.25 -8.00961,0 -8.0096,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -1.88475,0.72325 -45.3651,0.67228 -47.16821,-0.0553 z m 110.95,-0.53733 c -0.89878,-0.89878 -1.2,-12.82222 -1.2,-47.5 l 0,-46.3 -15.39301,0 c -13.11392,0 -15.48288,-0.2342 -16,-1.58179 -0.88316,-2.30147 -0.71461,-13.70043 0.22445,-15.17971 0.6275,-0.9885 9.55137,-1.20491 41.23469,-1 l 40.43387,0.2615 0.28893,8.75 0.28894,8.75 -16.03894,0 -16.03893,0 0,46.89301 c 0,41.8378 -0.17052,46.95845 -1.58179,47.5 -2.85542,1.09573 -14.97253,0.65267 -16.21821,-0.59301 z m 80.55,0.1199 c -1.40104,-0.81603 -1.75,-2.40521 -1.75,-7.96959 l 0,-6.95031 -7.48095,0 c -6.92913,0 -7.52133,-0.16597 -8.02845,-2.25 -0.30113,-1.2375 -0.42221,-19.35 -0.26906,-40.25 l 0.27846,-38 7.70868,-0.29132 7.70868,-0.29132 0.29132,-7.70868 0.29132,-7.70868 24.42974,-0.26819 c 18.87724,-0.20723 24.6127,0.0201 25.23469,1 0.44272,0.69751 0.81184,4.28676 0.82026,7.97613 l 0.0153,6.70793 7.75,0.29207 7.75,0.29206 0.295,7.91317 c 0.21083,5.65526 -0.0745,8.14758 -1,8.73469 -1.85792,1.17862 -13.56899,1.04346 -15.86074,-0.18304 -1.62811,-0.87134 -1.93426,-2.13755 -1.93426,-8 l 0,-6.96482 -22.5,0 -22.5,0 0,38.5 0,38.5 22.45794,0 22.45793,0 0.29207,-7.75 0.29206,-7.75 8.41435,-0.2931 c 6.05663,-0.21097 8.6442,0.0692 9.23468,1 0.45119,0.71121 0.82724,4.7806 0.83566,9.0431 l 0.0153,7.75 -8,0 -8,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -2.73554,1.04973 -45.78727,0.62244 -47.66821,-0.47311 z"
+         id="path3108"
+         inkscape:connector-curvature="0" />
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3125"
+       d="m 523.91457,371.67006 c 0,-50.04463 0.16551,-55.95653 1.58179,-56.5 2.06466,-0.79228 60.77176,-0.79228 62.83642,0 1.24388,0.47732 1.58179,2.17732 1.58179,7.95794 l 0,7.35094 7.75,0.29207 7.75,0.29206 0.26747,24.75 0.26747,24.75 -8.01747,0 -8.01747,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -0.86998,0.33385 -11.66998,0.60699 -24,0.60699 l -22.41821,0 0,15.5 0,15.5 -9,0 -9,0 0,-55.89301 z m 63.5,-16.10699 0,-22.5 -22.75,-0.26877 -22.75,-0.26878 0,23.03755 0,23.03755 22.75,-0.26878 22.75,-0.26877 0,-22.5 z m -366.25001,40.33772 c -0.8423,-0.33988 -1.25,-2.92339 -1.25,-7.92105 l 0,-7.41667 -8,0 -8,0 0,-40.5 0,-40.5 8,0 8,0 0,-8 0,-8 25.00001,0 25,0 0,8 0,8 8,0 8,0 0,8.39301 c 0,9.64753 0.038,9.60699 -9,9.60699 -8.91471,0 -9,-0.0816 -9,-8.60699 l 0,-7.39301 -23,0 -23.00001,0 0,38.5 0,38.5 23.00001,0 23,0 0,-8 0,-8 9,0 9,0 0,9 0,9 -8,0 -8,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -1.88475,0.72325 -45.36511,0.67228 -47.16822,-0.0553 z m 96.00001,0 c -0.8423,-0.33988 -1.25,-2.92339 -1.25,-7.92105 l 0,-7.41667 -8,0 -8,0 0,-25 0,-25 8,0 8,0 0,-7.39301 c 0,-5.81897 0.33678,-7.52225 1.58179,-8 2.06328,-0.79176 44.77314,-0.79176 46.83642,0 1.24388,0.47732 1.58179,2.17732 1.58179,7.95794 l 0,7.35094 7.75,0.29207 7.75,0.29206 0.26747,24.75 0.26747,24.75 -8.01747,0 -8.01747,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -1.88475,0.72325 -45.3651,0.67228 -47.16821,-0.0553 z m 46.51877,-40.08772 -0.26877,-22.75 -22.75,-0.26877 -22.75,-0.26878 0,23.01878 0,23.01877 23.01877,0 23.01878,0 -0.26878,-22.75 z m 32.8979,40.08333 c -0.36667,-0.36666 -0.66667,-18.54352 -0.66667,-40.39301 0,-35.30274 0.17614,-39.79393 1.58179,-40.33333 2.05698,-0.78934 91.21818,-0.76728 94.16821,0.0233 2.07425,0.55588 2.25,1.1764 2.25,7.94428 l 0,7.3413 7.75,0.29207 7.75,0.29206 0.26429,31.93215 c 0.20594,24.88076 -0.0149,32.10937 -1,32.73469 -1.62723,1.03292 -13.87924,1.0471 -15.49955,0.0179 -0.92722,-0.58894 -1.30128,-8.50257 -1.5,-31.73468 l -0.26474,-30.95006 -14.75,-0.27673 -14.75,-0.27674 0,31.50768 0,31.50769 -2.28085,0.57245 c -1.25447,0.31486 -5.19197,0.43593 -8.75,0.26906 l -6.46915,-0.30341 -0.5,-31.5 -0.5,-31.5 -14.75,-0.27673 -14.75,-0.27674 0,31.41975 c 0,27.7282 -0.18585,31.49106 -1.58179,32.02673 -2.14264,0.82221 -14.91806,0.77381 -15.75154,-0.0597 z m 240.58333,0.004 c -0.8423,-0.33949 -1.25,-2.923 -1.25,-7.92066 l 0,-7.41667 -8,0 -8,0 0,-48.5 0,-48.5 9,0 9,0 0,47.5 0,47.5 22.5,0 22.5,0 0.0153,-46.25 c 0.008,-25.4375 0.38447,-46.83189 0.83566,-47.5431 0.59048,-0.93077 3.17805,-1.21097 9.23468,-1 l 8.41436,0.2931 0.2596,48.25 0.25961,48.25 -8.00961,0 -8.0096,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -1.88475,0.72325 -45.3651,0.67228 -47.16821,-0.0553 z m 110.95,-0.53733 c -0.89878,-0.89878 -1.2,-12.82222 -1.2,-47.5 l 0,-46.3 -15.39301,0 c -13.11392,0 -15.48288,-0.2342 -16,-1.58179 -0.88316,-2.30147 -0.71461,-13.70043 0.22445,-15.17971 0.6275,-0.9885 9.55137,-1.20491 41.23469,-1 l 40.43387,0.2615 0.28893,8.75 0.28894,8.75 -16.03894,0 -16.03893,0 0,46.89301 c 0,41.8378 -0.17052,46.95845 -1.58179,47.5 -2.85542,1.09573 -14.97253,0.65267 -16.21821,-0.59301 z m 80.55,0.1199 c -1.40104,-0.81603 -1.75,-2.40521 -1.75,-7.96959 l 0,-6.95031 -7.48095,0 c -6.92913,0 -7.52133,-0.16597 -8.02845,-2.25 -0.30113,-1.2375 -0.42221,-19.35 -0.26906,-40.25 l 0.27846,-38 7.70868,-0.29132 7.70868,-0.29132 0.29132,-7.70868 0.29132,-7.70868 24.42974,-0.26819 c 18.87724,-0.20723 24.6127,0.0201 25.23469,1 0.44272,0.69751 0.81184,4.28676 0.82026,7.97613 l 0.0153,6.70793 7.75,0.29207 7.75,0.29206 0.295,7.91317 c 0.21083,5.65526 -0.0745,8.14758 -1,8.73469 -1.85792,1.17862 -13.56899,1.04347 -15.86074,-0.18304 -1.62811,-0.87134 -1.93426,-2.13755 -1.93426,-8 l 0,-6.96482 -22.5,0 -22.5,0 0,38.5 0,38.5 22.45794,0 22.45793,0 0.29207,-7.75 0.29206,-7.75 8.41435,-0.2931 c 6.05663,-0.21097 8.6442,0.0692 9.23468,1 0.45119,0.71121 0.82724,4.7806 0.83566,9.0431 l 0.0153,7.75 -8,0 -8,0 0,7.39301 c 0,5.81897 -0.33678,7.52225 -1.58179,8 -2.73554,1.04973 -45.78727,0.62244 -47.66821,-0.47311 z"
+       style="fill:#ededed" />
   </g>
 </svg>

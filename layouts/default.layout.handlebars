@@ -6,211 +6,35 @@
 		<meta charset="UTF-8"/>
 		
 		<link href="/default.style.css" rel="stylesheet" type="text/css"/>
-		<link href="/default.layout.header.style.css" rel="stylesheet" type="text/css"/>
-		<link href="/default.layout.container.style.css" rel="stylesheet" type="text/css"/>
-		<link href="/default.layout.footer.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.layout.style.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		
-		
-		<div id="panel">
-			{{#if user}}
-				<span id="logout">
-					<a href="/profile">{{user.utc_id}}</a>!
-					<a href="/logout">Logout</a>?
-				</span>
-			{{else}}
-				<span id="login">
-					<a href="/signup">Signup</a> or 
-					<a href="/login">Login</a>!
-				</span>
-			{{/if}}
-			<span class="fa fa-bars"></span>
-		</div>
 		<header>
-			
 			<h1>
-				<a href="/"><img src="/images/logo.png" alt="CompUTC"/></a>
-			</h1>
-			
-			<div id="menu">
 				<a href="/">
-					<span class="fa fa-home"></span>
-					<span class="page-name">Home</span>
+					<img src="/images/logo.svg" alt="CompUTC"/>
 				</a>
-				<a href="/about">
-					<span class="fa fa-smile-o"></span>
-					<span class="page-name">About</span>
-				</a>
-				<a href="/events">
-					<span class="fa fa-calendar"></span>
-					<span class="page-name">Events</span>
-				</a>
-				<a href="/contact">
-					<span class="fa fa-comment-o"></span>
-					<span class="page-name">Contact</span>
-				</a>
+			</h1>
+			<div>
+				{{#if user}}
+					<span>
+						<a href="/profile/{{user.utc_id}}">{{user.first_name}}</a>
+						<a href="/logout">Logout</a>
+					</span>
+				{{else}}
+					<span>
+						<a href="/signup">Signup</a> or 
+						<a href="/login">Login</a>!
+					</span>
+				{{/if}}
+				<span class="fa fa-bars"></span>
 			</div>
-			
 		</header>
 		
-		<div id="container">
-			
-			<div id="content">
-				{{{body}}}
-			</div>
-			
-			<div class="menu" id="left">
-				
-				<ul>
-					<li>
-						<b>Suborgs</b>
-					</li>
-					<li>
-						<a href="/">
-							<span class="fa fa-cogs"></span>
-							<span class="page-name">Tutoring</span>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<span class="fa fa-lock"></span>
-							<span class="page-name">Info Security</span>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<span class="fa fa-cube"></span>
-							<span class="page-name">Robotics</span>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<span class="fa fa-gamepad"></span>
-							<span class="page-name">Game Dev</span>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<span class="fa fa-code"></span>
-							<span class="page-name">Competitions</span>
-						</a>
-					</li>
-					<li>
-						<a href="/">
-							<span class="fa fa-cloud"></span>
-							<span class="page-name">Web Design</span>
-						</a>
-					</li>
-					<li>
-				</ul>
-				
-				<ul>
-					<li>
-						<b>Links</b>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.utc.edu/computer-science">
-							<span class="fa fa-university"></span>
-							<span class="page-name">UTC Page</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.computer.org/">
-							<span class="fa fa-asterisk"></span>
-							<span class="page-name">IEEECS Website</span>
-						</a>
-					</li>
-				</ul>
-				
-				<ul>
-					<li>
-						<b>Pages</b>
-					</li>
-					<li>
-						<a href="/">
-							<span class="fa fa-home"></span>
-							<span class="page-name">Home</span>
-						</a>
-					</li>
-					<li>
-						<a href="/about">
-							<span class="fa fa-smile-o"></span>
-							<span class="page-name">About</span>
-						</a>
-					</li>
-					<li>
-						<a href="/events">
-							<span class="fa fa-calendar"></span>
-							<span class="page-name">Events</span>
-						</a>
-					</li>
-					<li>
-						<a href="/contact">
-							<span class="fa fa-comment-o"></span>
-							<span class="page-name">Contact</span>
-						</a>
-					</li>
-				</ul>
-				
-			</div>
-			
-			<div class="menu" id="right">
-				
-				<ul>
-					<li>
-						<b>Social</b>
-					</li>
-					<li>
-						<a target="_blank" href="https://twitter.com/computcorg">
-							<span class="fa fa-twitter-square"></span>
-							<span class="page-name">Twitter</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.facebook.com/groups/ajeezy">
-							<span class="fa fa-facebook-square"></span>
-							<span class="page-name">Facebook</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://github.com/computc">
-							<span class="fa fa-github-square"></span>
-							<span class="page-name">Github</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.linkedin.com/groups/CompUTC-6700431">
-							<span class="fa fa-linkedin-square"></span>
-							<span class="page-name">Linkedin</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/channel/UCHXYDL4XvpYNLjiVnsLGUbg">
-							<span class="fa fa-youtube-square"></span>
-							<span class="page-name">Youtube</span>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://steamcommunity.com/groups/computc">
-							<span class="fa fa-steam-square"></span>
-							<span class="page-name">Steam</span>
-						</a>
-					</li>
-				</ul>
-				
-			</div>
-			
+		<div id="body">
+			{{{body}}}
 		</div>
-		
-		<footer>
-			
-			<small>
-				Gee! You read all the way to the bottom of the page!
-				You must have a lot of time to waste on the internet.
-			</small>
-			
-		</footer>
 		
 	</body>
 </html>
