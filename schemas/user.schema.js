@@ -32,11 +32,6 @@ var user = mongoose.Schema({
 	
 });
 
-user.methods.encryptPassword = function(password)
-{
-	return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-}
-
 user.pre("save", function(next)
 {
 	if(this.isModified("password"))

@@ -8,45 +8,46 @@ module.exports = function(request, utcid, password, done)
 	var firstname = request.body.firstname;
 	var lastname = request.body.lastname;
 	
-	if(!utcid || !password || !repassword || !firstname || !lastname)
+	Users.findOne({utcid: utcid}).exec().then(function(user)
 	{
-		request.flash("message", "Not enough information.");
-		return done(null);
-	}
-	
-	if(!new RegExp(/^[a-z]{3}[0-9]{3}$/).test(utcid))
-	{
-		request.flash("message", "UTCID is invalid.");
-		return done(null);
-	}
-	
-	if(password != repassword)
-	{
-		request.flash("message", "Passwords do not match.");
-		return done(null);
-	}
-	
-	Users.findOne({utcid: utcid}, function(error, user)
-	{
-		if(error)
-		{
-			console.log(error);
-			return done(null);
-		}
-		
 		if(user)
 		{
-			request.flash("message", utcid + " already been registered.");
-			return done(null);
+			throw utcid + " already been registered.";
 		}
-		
+	})
+	.then(function()
+	{
+		if(!utcid || !password || !repassword || !firstname || !lastname)
+		{
+			throw "Not enough information."
+		}
+	})
+	.then(function()
+	{
+		if(!new RegExp(/^[a-z]{3}[0-9]{3}$/).test(utcid))
+		{
+			throw "UTCID is invalid.";
+		}
+	})
+	.then(function()
+	{
+		if(password != repassword)
+		{
+			throw "Passwords do not match.";
+		}
+	})
+	.then(function()
+	{
 		Users.create({
-			utcid: utcid,
-			firstname: firstname,
-			lastname: lastname,
-			password: password
-		})
+			utcid: utcid, password: password,
+			firstname: firstname, lastname: lastname
+		});
 		
 		return done(null, {utcid: utcid, firstname: firstname});
+	},
+	function(error)
+	{
+		request.flash("message", error);
+		return done(null);
 	});
 }
