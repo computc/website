@@ -1,6 +1,6 @@
 footer
 {
-	padding: 1em;
+	padding: 1rem;
 	
 	color: #EEE;
 	background-color: #CC3333;
@@ -10,11 +10,9 @@ footer > small
 {
 	margin: auto;
 	display: block;
-	width: 50%;
-	min-width: 17em;
-	max-width: 24em;
+	max-width: 20rem;
 	
-	font-size: 12px;
-	line-height: 1em;
+	font-size: 0.75rem;
 	text-align: center;
+	line-height: 1.2em;
 }

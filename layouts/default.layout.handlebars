@@ -6,7 +6,8 @@
 		<meta charset="UTF-8"/>
 		
 		<link href="/default.style.css" rel="stylesheet" type="text/css"/>
-		<link href="/default.layout.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.header.layout.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.footer.layout.style.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		
@@ -28,13 +29,22 @@
 						<a href="/login">Login</a>!
 					</span>
 				{{/if}}
-				<span class="fa fa-bars"></span>
+				<a href="#">
+					<span class="fa fa-bars"></span>
+				</a>
 			</div>
 		</header>
 		
-		<div id="body">
+		<div id="content">
 			{{{body}}}
 		</div>
+		
+		<footer>
+			<small>
+				Gee! You read all the way to the bottom of the page!
+				You must have a lot of time to waste on the internet.
+			</small>
+		</footer>
 		
 	</body>
 </html>

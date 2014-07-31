@@ -6,33 +6,15 @@
 		<meta charset="UTF-8"/>
 		
 		<link href="/default.style.css" rel="stylesheet" type="text/css"/>
-		<link href="/default.layout.header.style.css" rel="stylesheet" type="text/css"/>
-		<link href="/default.layout.container.style.css" rel="stylesheet" type="text/css"/>
-		<link href="/default.layout.footer.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/home.header.layout.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.footer.layout.style.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		
-		
-		<div id="panel">
-			{{#if user}}
-				<span id="logout">
-					<a href="/profile">{{user.utc_id}}</a>!
-					<a href="/logout">Logout</a>?
-				</span>
-			{{else}}
-				<span id="login">
-					<a href="/signup">Signup</a> or 
-					<a href="/login">Login</a>!
-				</span>
-			{{/if}}
-			<span class="fa fa-bars"></span>
-		</div>
 		<header>
-			
 			<h1>
-				<a href="/"><img src="/images/logo.png" alt="CompUTC"/></a>
+				<img src="/images/logo.svg" alt="CompUTC"/>
 			</h1>
-			
 			<div id="menu">
 				<a href="/">
 					<span class="fa fa-home"></span>
@@ -51,14 +33,14 @@
 					<span class="page-name">Contact</span>
 				</a>
 			</div>
-			
 		</header>
 		
+		<div id="content">
+			{{{body}}}
+		</div>
+		
+		<!--
 		<div id="container">
-			
-			<div id="content">
-				{{{body}}}
-			</div>
 			
 			<div class="menu" id="left">
 				
@@ -202,14 +184,13 @@
 			</div>
 			
 		</div>
+		-->
 		
 		<footer>
-			
 			<small>
 				Gee! You read all the way to the bottom of the page!
 				You must have a lot of time to waste on the internet.
 			</small>
-			
 		</footer>
 		
 	</body>

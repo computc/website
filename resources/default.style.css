@@ -25,7 +25,12 @@ body
 	overflow-x: hidden;
 }
 
-hr
+#content
+{
+	padding: 2rem;
+}
+
+/*hr
 {
 	width: 50%;
 	min-width: 180px;
@@ -35,4 +40,4 @@ hr
 	border-top-width: 3px;
 	border-top-style: dashed;
 	border-top-color: #080808;
-}
+}*/
