@@ -1,30 +1,29 @@
-module.exports = function(database)
+var Users = require("../schemas/user.schema.js");
+
+module.exports = function(request, utcid, password, done)
 {
-	var bcrypt = require("bcrypt-nodejs");
-	
-	return function(request, utc_id, password, done)
+	Users.findOne({utcid: utcid}, function(error, user)
 	{
-		database.users.findOne({utc_id: utc_id}, function(error, user)
+		if(error)
 		{
-			if(error)
-			{
-				console.log(error);
-				return done(null);
-			}
-			
-			if(!user)
-			{
-				request.flash("message", "Unavailable utcid.");
-				return done(null);
-			}
-			
-			if(!bcrypt.compareSync(password, user.password))
-			{
-				request.flash("message", "Incorrect password.");
-				return done(null);
-			}
-			
-			return done(null, {utc_id: user.utc_id, first_name: user.first_name});
-		});
-	}
+			console.log(error);
+			return done(null);
+		}
+		
+		if(!user)
+		{
+			request.flash("message", LOGIN_ERROR_MESSAGE);
+			return done(null);
+		}
+		
+		if(!user.isValidPassword(password))
+		{
+			request.flash("message", LOGIN_ERROR_MESSAGE);
+			return done(null);
+		}
+		
+		return done(null, {utcid: user.utcid, firstname: user.firstname});
+	});
 }
+
+var LOGIN_ERROR_MESSAGE = "The utcid and password do not match.";

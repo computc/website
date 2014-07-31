@@ -1,43 +1,13 @@
-var bcrypt = require("bcrypt-nodejs");
+var Users = require("./schemas/user.schema.js");
 
-module.exports = function(database)
+Users.count({}, function(error, count)
 {
-	var placeholders = [
-		{
-			utc_id: "psn719",
-			first_name: "Andrew",
-			last_name: "McPherson"
-		},
-		{
-			utc_id: "vln357",
-			first_name: "Matthew",
-			last_name: "Jallouk"
-		},
-		{
-			utc_id: "jgg529",
-			first_name: "Sarah",
-			last_name: "Hall"
-		},
-		{
-			utc_id: "dlv286",
-			first_name: "Jonathon",
-			last_name: "Hutchins"
-		},
-		{
-			utc_id: "xhd423",
-			first_name: "Rachel",
-			last_name: "Frye"
-		}
-	];
-	
-	var default_password = bcrypt.hashSync("random", bcrypt.genSaltSync(8), null);
-	
-	database.users.drop();
-	
-	for(var i in placeholders)
+	if(count === 0)
 	{
-		var user = placeholders[i];
-		user.password = default_password;
-		database.users.insert(user);
+		Users.create({utcid: "psn719", firstname: "Andrew", lastname: "McPherson", password: "random"});
+		Users.create({utcid: "vln357", firstname: "Matthew", lastname: "Jallouk", password: "random"});
+		Users.create({utcid: "jgg529", firstname: "Sarah", lastname: "Hall", password: "random"});
+		Users.create({utcid: "dlv286", firstname: "Jonathon", lastname: "Hutchins", password: "random"});
+		Users.create({utcid: "xhd423", firstname: "Rachel", lastname: "Frye", password: "random"});
 	}
-}
+});

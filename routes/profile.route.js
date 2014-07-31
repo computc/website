@@ -1,3 +1,5 @@
+var Users = require("../schemas/user.schema.js");
+
 module.exports = function(database)
 {
 	var route = require("express").Router();
@@ -6,12 +8,12 @@ module.exports = function(database)
 	
 	route.get("/", function(request, response)
 	{
-		response.redirect("/profile/" + request.user.utc_id);
+		response.redirect("/profile/" + request.user.utcid);
 	});
 	
-	route.get("/:utc_id", function(request, response, next)
+	route.get("/:utcid", function(request, response, next)
 	{
-		database.users.findOne({utc_id: request.params.utc_id}, {password: 0}, function(error, profile)
+		Users.findOne({utcid: request.params.utcid}, {password: 0}, function(error, profile)
 		{
 			if(profile)
 			{

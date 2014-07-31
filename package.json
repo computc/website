@@ -14,7 +14,7 @@
 		"express3-handlebars": "*",
 		"passport": "*",
 		"passport-local": "*",
-		"mongojs": "*",
+		"mongoose": "*",
 		"bcrypt-nodejs": "*"
 	}
 }
