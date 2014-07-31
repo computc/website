@@ -1,4 +1,4 @@
-module.exports = function(passport, database)
+module.exports = function(database, passport)
 {
 	var route = require("express").Router();
 	

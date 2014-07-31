@@ -68,7 +68,7 @@ application.use(require("./middleware/get-flash-locals.js"));
 application.use(require("./middleware/get-user-locals.js"));
 
 application.use("/", require("./routes/home.route.js")());
-application.use("/", require("./routes/login.route.js")(passport, database));
+application.use("/", require("./routes/login.route.js")(database, passport));
 application.use("/profile", require("./routes/profile.route.js")(database));
 application.get("*", function(request, response) {response.render("error");});
 
@@ -77,5 +77,7 @@ application.get("*", function(request, response) {response.render("error");});
 /////////////////////////////////////////////////
 
 var port = process.env.PORT || 1271;
-console.log("127.0.0.1:" + port);
-application.listen(port);
+application.listen(port, function()
+{
+	console.log("127.0.0.1:" + port);
+});

@@ -6,6 +6,6 @@ module.exports = function(request, response, next)
 	}
 	else
 	{
-		response.redirect("/login");
+		return response.redirect("/login");
 	}
 }
