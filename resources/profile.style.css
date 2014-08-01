@@ -1,0 +1,34 @@
+#profile
+{
+	width: 9rem;
+	padding: 0.5rem;
+	position: relative;
+	background-color: #D6D9E0;
+}
+
+#profile > img
+{
+	width: 9rem;
+}
+
+#profile > hr
+{
+	margin: 0.25rem 0rem;
+}
+
+#profile > ul
+{
+	padding: 0rem;
+	list-style-type: none;
+}
+
+#profile > ul > li > a
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+#profile > ul > li > a > span.label
+{
+	text-decoration: underline;
+}
