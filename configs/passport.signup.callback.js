@@ -1,6 +1,7 @@
-var Users = require("../schemas/user.schema.js");
+var handlebars = require("express-handlebars").create(require("./handlebars.options.js"));
+var nodemailer = require("nodemailer").createTransport(require("./nodemailer.configuration.js"));
 
-var handlebars = require("express-handlebars").create();
+var Users = require("../schemas/user.schema.js");
 
 module.exports = function(request, utcid, password, done)
 {
@@ -40,14 +41,38 @@ module.exports = function(request, utcid, password, done)
 	})
 	.then(function()
 	{
-		Users.create({utcid: utcid, password: password, firstname: firstname, lastname: lastname});
-		
-		handlebars.render("./emails/confirm.handlebars", {firstname: firstname}).then(function(rendering)
+		Users.create(
 		{
-			console.log(rendering);
+			utcid: utcid,
+			password: password,
+			firstname: firstname,
+			lastname: lastname
+		})
+		.then(function(data)
+		{
+			return handlebars.render("./emails/confirm.handlebars",
+			{
+				firstname: firstname
+			})
+		})
+		.then(function(data)
+		{
+			return nodemailer.sendMail(
+			{
+				from: "CompUTC",
+				to: utcid + "@mocs.utc.edu",
+				subject: "Welcome to CompUTC!",
+				html: data
+			});
+		})
+		.then(function(data)
+		{
+			return done(null,
+			{
+				utcid: utcid,
+				firstname: firstname
+			});
 		});
-		
-		return done(null, {utcid: utcid, firstname: firstname});
 	},
 	function(error)
 	{

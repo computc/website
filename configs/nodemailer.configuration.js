@@ -1,0 +1,1 @@
+module.exports = {service: "gmail", auth: require("./nodemailer.credentials.js")}
