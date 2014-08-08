@@ -1,5 +1,7 @@
 var Users = require("../schemas/user.schema.js");
 
+var handlebars = require("express-handlebars").create();
+
 module.exports = function(request, utcid, password, done)
 {
 	var utcid = request.body.utcid;
@@ -38,9 +40,11 @@ module.exports = function(request, utcid, password, done)
 	})
 	.then(function()
 	{
-		Users.create({
-			utcid: utcid, password: password,
-			firstname: firstname, lastname: lastname
+		Users.create({utcid: utcid, password: password, firstname: firstname, lastname: lastname});
+		
+		handlebars.render("./emails/confirm.handlebars", {firstname: firstname}).then(function(rendering)
+		{
+			console.log(rendering);
 		});
 		
 		return done(null, {utcid: utcid, firstname: firstname});

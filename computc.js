@@ -5,7 +5,7 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var passport = require("passport");
-var handlebars = require("express3-handlebars");
+var handlebars = require("express-handlebars");
 
 ///////////////////////////////////////////////////
 ////////////////////configuring///////////////////
@@ -64,7 +64,7 @@ application.use(require("./middleware/get-flash-locals.js"));
 application.use(require("./middleware/get-user-locals.js"));
 
 application.use("/", require("./routes/home.route.js")());
-application.use("/", require("./routes/login.route.js")(passport));
+application.use("/", require("./routes/auth.route.js")(passport));
 application.use("/profile", require("./routes/profile.route.js")());
 application.get("*", function(request, response) {response.render("error");});
 
