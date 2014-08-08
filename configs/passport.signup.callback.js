@@ -11,7 +11,7 @@ module.exports = function(request, utcid, password, done)
 	var firstname = request.body.firstname;
 	var lastname = request.body.lastname;
 	
-	Users.findOne({utcid: utcid}).exec().then(function(user)
+	return Users.findOne({utcid: utcid}).exec().then(function(user)
 	{
 		if(user)
 		{
@@ -41,31 +41,36 @@ module.exports = function(request, utcid, password, done)
 	})
 	.then(function()
 	{
-		Users.create(
+		return Users.create(
 		{
 			utcid: utcid,
 			password: password,
 			firstname: firstname,
 			lastname: lastname
 		})
-		.then(function(data)
+		.then(function()
 		{
-			return handlebars.render("./emails/confirm.handlebars",
+			return handlebars.render("./emails/confirm.email.handlebars",
 			{
-				firstname: firstname
+				utcid: utcid,
+				firstname: firstname,
+				verifycode: "123abc456"
 			})
 		})
-		.then(function(data)
+		.then(function(render)
 		{
-			return nodemailer.sendMail(
+			if(utcid == "psn719") //debug
 			{
-				from: "CompUTC",
-				to: utcid + "@mocs.utc.edu",
-				subject: "Welcome to CompUTC!",
-				html: data
-			});
+				return nodemailer.sendMail(
+				{
+					from: "CompUTC",
+					to: utcid + "@mocs.utc.edu",
+					subject: "Welcome to CompUTC!",
+					html: render
+				});
+			}
 		})
-		.then(function(data)
+		.then(function()
 		{
 			return done(null,
 			{
