@@ -72,8 +72,9 @@ application.get("*", function(request, response) {response.render("error");});
 ////////////////////listening/////////////////////
 /////////////////////////////////////////////////
 
-var port = process.env.PORT || 1271;
+var port = process.env.PORT || 80;
 application.listen(port, function()
 {
-	console.log("127.0.0.1:" + port);
+	console.log("Established the server.");
+	console.log("Listening on port " + port + ".");
 });
