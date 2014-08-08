@@ -30,6 +30,13 @@ body
 	padding: 2rem;
 }
 
+h2
+{
+	font-size: 2rem;
+	text-align: center;
+	font-family: goldfish;
+}
+
 /*hr
 {
 	width: 50%;
@@ -41,3 +48,8 @@ body
 	border-top-style: dashed;
 	border-top-color: #080808;
 }*/
+
+p
+{
+	text-indent: 2rem;
+}

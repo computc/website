@@ -1,40 +1,27 @@
-b
+form > .group
 {
-	display: block;
-	
-	font-size: 2rem;
-	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+form > .group > label
+{
+	cursor: pointer;
 	font-family: goldfish;
 }
 
-form
-{
-	margin-top: 1rem;
-	line-height: 1rem;
-}
-
-.group:not(:last-child)
-{
-	margin-bottom: 1em;
-}
-
-.group > label
-{
-	cursor: pointer;
-}
-
-.group > input[type=text],
-.group > input[type=password],
-.group > select
+form > .group > input[type=text],
+form > .group > input[type=password],
+form > .group > select
 {
 	width: 100%;
 	padding: 0.5em;
 	box-sizing: border-box;
 	
 	border-width: 1px;
-	border-radius: 3px;
 	border-color: #111;
 	border-style: solid;
+	border-radius: 0.25rem;
 	
 	font-size: inherit;
 	font-family: inherit;
@@ -42,9 +29,9 @@ form
 	transition: border-color 0.3s ease;
 }
 
-.group > input[type=text]:focus,
-.group > input[type=password]:focus,
-.group > select:focus
+form > .group > input[type=text]:focus,
+form > .group > input[type=password]:focus,
+form > .group > select:focus
 {
 	outline: none;
 	border-color: #CC3333;
