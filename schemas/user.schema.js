@@ -39,13 +39,7 @@ var user = mongoose.Schema({
 		},
 		token:
 		{
-			type: String
-		},
-		date:
-		{
-			type: Date,
-			required: true,
-			default: Date.now,
+			type: String,
 			expires: 10
 		}
 	}
@@ -55,8 +49,7 @@ user.pre("save", function(next)
 {
 	if(this.verified.status == false)
 	{
-		this.verified.token = "123";
-		console.log(this.verified.token);
+		this.verified.token = "123456789";
 	}
 	
 	if(this.isModified("password"))
