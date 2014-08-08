@@ -24,16 +24,27 @@ module.exports = function(database)
 		});
 	});
 	
-	route.get("/:utcid/verify/:token", function(request, response)
+	route.get("/:utcid/verify/:token", function(request, response, next)
 	{
-		var query = Users.findOne({utcid: request.params.utcid});
+		var query = Users.findOne({
+			"utcid": request.params.utcid,
+			"verified.token": request.params.token
+		});
 		
 		query.exec().then(function(user)
 		{
-			user.verified.status = true;
-			user.save();
-			
-			response.redirect("/profile");
+			if(user)
+			{
+				user.verified.status = true;
+				user.verified.token = undefined;
+				user.save();
+				
+				response.redirect("/profile");
+			}
+			else
+			{
+				next();
+			}
 		});
 	});
 	
