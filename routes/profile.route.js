@@ -4,9 +4,7 @@ module.exports = function(database)
 {
 	var route = require("express").Router();
 	
-	route.use(require("../middleware/has-been-authed.js"));
-	
-	route.get("/", function(request, response)
+	route.get("/", require("../middleware/has-been-authed.js"), function(request, response)
 	{
 		response.redirect("/profile/" + request.user.utcid);
 	});
@@ -18,6 +16,21 @@ module.exports = function(database)
 			if(profile)
 			{
 				response.render("profile", {profile: profile});
+			}
+			else
+			{
+				next();
+			}
+		});
+	});
+	
+	route.get("/:utcid/verify/:token", function(request, response, next)
+	{
+		Users.findOne({utcid: request.params.utcid}, "verification", function(error, profile)
+		{
+			if(profile)
+			{
+				console.log(profile);
 			}
 			else
 			{
