@@ -48,13 +48,13 @@ module.exports = function(request, utcid, password, done)
 			firstname: firstname,
 			lastname: lastname
 		})
-		.then(function()
+		.then(function(user)
 		{
 			return handlebars.render("./emails/confirm.email.handlebars",
 			{
-				utcid: utcid,
-				firstname: firstname,
-				verifycode: "123abc456"
+				utcid: user.utcid,
+				firstname: user.firstname,
+				token: user.verified.token
 			})
 		})
 		.then(function(render)
