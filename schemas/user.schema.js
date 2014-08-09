@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
-var uuid = require("node-uuid");
 var bcrypt = require("bcrypt-nodejs");
+var crypto = require("crypto");
 
 var user = mongoose.Schema({
 	
@@ -51,7 +51,7 @@ user.pre("save", function(next)
 {
 	if(this.verified.status == false)
 	{
-		this.verified.token = uuid.v4();
+		this.verified.token = crypto.randomBytes(8).toString("hex");
 	}
 	
 	if(this.isModified("password"))
