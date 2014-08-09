@@ -1,24 +1,7 @@
 <html>
-	<head>
-		<style>
-			html
-			{
-				font-size: 18px;
-			}
-			
-			div:not(:first-child)
-			{
-				margin-top: 1rem;
-			}
-			
-			div:not(:last-child)
-			{
-				margin-bottom: 1rem;
-			}
-		</style>
-	<head>
-	<body>
-		<div>
+	<div style="max-width: 480px; margin: auto;">
+		<img src="http://computc.org/images/logobg.png" style="width: 100%"/>
+		<div style="margin-top: 1em; margin-bottom: 1em; text-align: justify;">
 			Hey, {{firstname}}! Welcome to CompUTC! Etsy doostang
 			zoodles disqus groupon greplin oooj voxy zoodles, weebly
 			ning heekya handango imeem plugg dopplr jibjab, movity
@@ -27,12 +10,20 @@
 			zlio voxy zinch twones zoodles joost, sococo zynga imvu
 			imeem stypi lijit bubbli flickr mog sococo greplin bebo.
 		</div>
-		<div>
-			To activate your account, go to http://www.computc.org/profile/{{utcid}}/verify/{{token}}.
-			You will be redirected to your profile, where you can add more details about yourself!
+		<a href="http://www.computc.org/profile/{{utcid}}/verify/{{token}}" style="text-decoration: none; font-weight: bold; text-align: center;">
+			<div style="width: 240px; padding: 1em; margin: auto; border-radius: 4px; color: #EDEDED; background-color: #CC3333;">
+				Activate your Account!
+			</div>
+		</a>
+		<div style="margin-top: 1em; margin-bottom: 1em; text-align: justify;">
+			To activate your account, go to
+			"http://www.computc.org/profile/{{utcid}}/verify/{{token}}".
+			You will be redirected to your profile, where you can change
+			to your preferred email address. This token for activating
+			your account will expire in two hours.
 		</div>
-		<div>
-			Again, thanks again for joining! I'm sure we'll you around the EMCS. :]
+		<div style="text-align: center;">
+			Thanks again for joining! I'm sure we'll you around the EMCS.
 		</div>
-	</body>
-</hmtl>
+	</div>
+</html>
