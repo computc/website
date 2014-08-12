@@ -67,7 +67,7 @@ application.use("/", require("./routes/home.route.js")());
 application.use("/", require("./routes/auth.route.js")(passport));
 application.use("/profile", require("./routes/profile.route.js")());
 application.use("/tutoring", require("./routes/tutoring.route.js")());
-application.get("*", function(request, response) {response.render("error");});
+application.use("*", require("./routes/error.route.js")());
 
 ///////////////////////////////////////////////////
 ////////////////////listening/////////////////////
