@@ -32,8 +32,8 @@ require("./placeholders.js");
 
 var options = require("./configs/handlebars.options.js");
 
-application.engine("handlebars", handlebars(options));
-application.set("view engine", "handlebars");
+application.engine(".html", handlebars(options));
+application.set("view engine", ".html");
 application.set("views", "./content");
 
 ///////////////////////////////////////////////////
