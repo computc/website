@@ -1,7 +1,7 @@
 var handlebars = require("express-handlebars").create(require("./handlebars.options.js"));
 var nodemailer = require("nodemailer").createTransport(require("./nodemailer.configuration.js"));
 
-var Users = require("../schemas/user.schema.js");
+var database = require("../database.js");
 
 module.exports = function(request, utcid, password, done)
 {
@@ -11,7 +11,7 @@ module.exports = function(request, utcid, password, done)
 	var firstname = request.body.firstname;
 	var lastname = request.body.lastname;
 	
-	return Users.findOne({utcid: utcid}).exec().then(function(user)
+	return database.users.findOne({utcid: utcid}).exec().then(function(user)
 	{
 		if(user)
 		{
@@ -41,7 +41,7 @@ module.exports = function(request, utcid, password, done)
 	})
 	.then(function()
 	{
-		return Users.create(
+		return database.users.create(
 		{
 			utcid: utcid,
 			password: password,

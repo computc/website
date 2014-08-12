@@ -65,6 +65,7 @@ application.use(require("./middleware/get-user-locals.js"));
 
 application.use("/", require("./routes/home.route.js")());
 application.use("/", require("./routes/auth.route.js")(passport));
+application.use("/tutoring", require("./routes/tutoring.route.js"));
 application.use("/profile", require("./routes/profile.route.js")());
 application.get("*", function(request, response) {response.render("error");});
 

@@ -1,8 +1,8 @@
-var Users = require("../schemas/user.schema.js");
+var database = require("../database.js");
 
 module.exports = function(request, utcid, password, done)
 {
-	Users.findOne({utcid: utcid}, function(error, user)
+	database.users.findOne({utcid: utcid}, function(error, user)
 	{
 		if(error)
 		{
