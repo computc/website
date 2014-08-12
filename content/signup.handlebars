@@ -1,45 +1,58 @@
 <link href="signup.style.css" rel="stylesheet" type="text/css"/>
 
-{{#if message}}
-	<div>{{message}}</div>
-{{/if}}
+<div id="signup">
+	
+	<h2>
+		Signup for CompUTC!
+	</h2>
 
-<h2>
-	Signup for CompUTC!
-</h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Quisque a dui ac mi convallis euismod. Vestibulum porta
+		porttitor faucibus. Phasellus tincidunt arcu non nulla
+		facilisis tincidunt. Vestibulum et luctus justo.
+	</p>
+	
+	{{#if message}}
+		<div class="message">
+			{{message}}
+		</div>
+	{{/if}}
 
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-	Quisque a dui ac mi convallis euismod. Vestibulum porta
-	porttitor faucibus. Phasellus tincidunt arcu non nulla
-	facilisis tincidunt. Vestibulum et luctus justo.
-</p>
+	<form action="/signup" method="post">
+		
+		<div class="group">
+			<label for="utcid">UTC ID</label>
+			<input name="utcid" id="utcid" type="text">
+		</div>
+		
+		<div class="group">
+			<label for="password">Password</label>
+			<input name="password" id="password" type="password">
+		</div>
+		
+		<div class="group">
+			<label for="repassword">Password again</label>
+			<input name="repassword" id="repassword" type="password">
+		</div>
+		
+		<div class="group">
+			<label for="firstname">First Name</label>
+			<input name="firstname" id="firstname" type="text">
+		</div>
+		
+		<div class="group">
+			<label for="lastname">Last Name</label>
+			<input name="lastname" id="lastname" type="text">
+		</div>
+		
+		<input type="submit" value="Signup"/>
+		
+	</form>
 
-<form action="/signup" method="post">
-	<div class="group">
-		<label for="utcid">UTC ID</label>
-		<input name="utcid" id="utcid" type="text">
+	<div class="to-login">
+		Oh! You already have an account? Why didn't you say so!
+		<a href="/login">Click here to login!</a>
 	</div>
-	<div class="group">
-		<label for="password">Password</label>
-		<input name="password" id="password" type="password">
-	</div>
-	<div class="group">
-		<label for="repassword">Password again</label>
-		<input name="repassword" id="repassword" type="password">
-	</div>
-	<div class="group">
-		<label for="firstname">First Name</label>
-		<input name="firstname" id="firstname" type="text">
-	</div>
-	<div class="group">
-		<label for="lastname">Last Name</label>
-		<input name="lastname" id="lastname" type="text">
-	</div>
-	<input type="submit" value="Signup"/>
-</form>
-
-<div>
-	Oh! You already have an account?
-	<a href="/login">Click here to login!</a>
+	
 </div>

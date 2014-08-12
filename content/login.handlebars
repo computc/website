@@ -1,25 +1,43 @@
 <link href="login.style.css" rel="stylesheet" type="text/css"/>
 
-{{#if message}}
-	<div>{{message}}</div>
-{{/if}}
-
-<form action="/login" method="post">
+<div id="login">
 	
-	<div id="left" class="group">
-		<label for="utcid">UTC ID</label>
-		<input name="utcid" id="utcid" type="text">
+	<h2>
+		Login to CompUTC!
+	</h2>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Quisque a dui ac mi convallis euismod. Vestibulum porta
+		porttitor faucibus. Phasellus tincidunt arcu non nulla
+		facilisis tincidunt. Vestibulum et luctus justo.
+	</p>
+	
+	{{#if message}}
+		<div class="message">
+			{{message}}
+		</div>
+	{{/if}}
+
+	<form action="/login" method="post">
+		
+		<div class="group">
+			<label for="utcid">UTC ID</label>
+			<input name="utcid" id="utcid" type="text">
+		</div>
+		
+		<div class="group">
+			<label for="password">Password</label>
+			<input name="password" id="password" type="password">
+		</div>
+
+		<input type="submit" value="Log in">
+		
+	</form>
+	
+	<div class="to-signup">
+		Oh! You already have an account? Why didn't you say so!
+		<a href="/login">Click here to login!</a>
 	</div>
 	
-	<div id="right" class="group">
-		<label for="password">Password</label>
-		<input name="password" id="password" type="password">
-	</div>
-
-	<input type="submit" value="Log in">
-</form>
-
-<div>
-	Oh? You don't have an account yet?
-	<a href="/signup">Click here to signup!</a>
 </div>

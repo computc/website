@@ -1,18 +1,29 @@
-form > .group
+#signup > .message
+{
+	padding: 0.5rem;
+	margin: 1rem auto;
+	
+	text-align: center;
+	
+	border-radius: 4px;
+	background-color: #fcf8e3;
+}
+
+#signup > form > .group
 {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
 
-form > .group > label
+#signup > form > .group > label
 {
 	cursor: pointer;
 	font-family: goldfish;
 }
 
-form > .group > input[type=text],
-form > .group > input[type=password],
-form > .group > select
+#signup > form > .group > input[type=text],
+#signup > form > .group > input[type=password],
+#signup > form > .group > select
 {
 	width: 100%;
 	padding: 0.5em;
@@ -29,15 +40,15 @@ form > .group > select
 	transition: border-color 0.3s ease;
 }
 
-form > .group > input[type=text]:focus,
-form > .group > input[type=password]:focus,
-form > .group > select:focus
+#signup > form > .group > input[type=text]:focus,
+#signup > form > .group > input[type=password]:focus,
+#signup > form > .group > select:focus
 {
 	outline: none;
 	border-color: #CC3333;
 }
 
-form > input[type=submit]
+#signup > form > input[type=submit]
 {
 	display: block;
 	margin: 1em auto;
@@ -51,4 +62,9 @@ form > input[type=submit]
 	font-size: inherit;
 	font-family: inherit;
 	background-color: #C33333;
+}
+
+#signup > .to-login
+{
+	text-align: center;
 }
