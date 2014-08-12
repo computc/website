@@ -17,10 +17,17 @@ html
 	background-image: url("/images/grey.png");
 }
 
+@media(max-width: 640px)
+{
+	html
+	{
+		font-size: 14px;
+	}
+}
+
 body
 {
 	margin: auto;
-	min-width: 306px;
 	max-width: 1186px;
 	overflow-x: hidden;
 }
@@ -37,19 +44,20 @@ h2
 	font-family: goldfish;
 }
 
-/*hr
+hr
 {
 	width: 50%;
-	min-width: 180px;
+	min-width: 12rem;
 	margin: 1.5rem auto;
 	
 	border: none;
-	border-top-width: 3px;
+	border-top-width: 2px;
 	border-top-style: dashed;
 	border-top-color: #080808;
-}*/
+}
 
 p
 {
-	text-indent: 2rem;
+	text-indent: 4rem;
+	text-align: justify;
 }
