@@ -1,51 +1,19 @@
-var database = require("../database.js");
+//var database = require("../database.js");
 
 module.exports = function()
 {
 	var route = require("express").Router();
 	
-	route.get("/", require("../middleware/has-been-authed.js"), function(request, response)
+	route.get("/", function(request, response)
 	{
-		response.redirect("/profile/" + request.user.utcid);
+		response.render("tutoring");
 	});
 	
-	route.get("/:utcid", function(request, response, next)
-	{
-		database.users.findOne({utcid: request.params.utcid}, {password: 0}, function(error, profile)
-		{
-			if(profile)
-			{
-				response.render("profile", {profile: profile});
-			}
-			else
-			{
-				next();
-			}
-		});
-	});
+	//route.use(require("../middleware/has-been-authed.js"));
 	
-	route.get("/:utcid/verify/:token", function(request, response, next)
+	route.get("/requestion", function(request, response)
 	{
-		var query = database.users.findOne({
-			"utcid": request.params.utcid,
-			"verified.token": request.params.token
-		});
-		
-		query.exec().then(function(user)
-		{
-			if(user)
-			{
-				user.verified.status = true;
-				user.verified.token = undefined;
-				user.save();
-				
-				response.redirect("/profile");
-			}
-			else
-			{
-				next();
-			}
-		});
+		response.render("requestion/first");
 	});
 	
 	return route;
