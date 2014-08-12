@@ -61,3 +61,15 @@ p
 	text-indent: 4rem;
 	text-align: justify;
 }
+
+.button
+{
+	color: #F8F8F8;
+	text-decoration: none;
+	
+	padding: 0.5rem;
+	display: inline-block;
+	
+	border-radius: 0.25rem;
+	background-color: #CC3333;
+}

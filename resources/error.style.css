@@ -1,0 +1,17 @@
+#error
+{
+	text-align: center;
+}
+
+#error > h2
+{
+	font-size: 7rem;
+}
+
+#error > img
+{
+	width: 100%;
+	margin: 1rem auto;
+	display: block;
+	max-width: 320px;
+}
