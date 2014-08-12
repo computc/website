@@ -1,6 +1,6 @@
-var Users = require("../schemas/user.schema.js");
+var database = require("../database.js");
 
-module.exports = function(database)
+module.exports = function()
 {
 	var route = require("express").Router();
 	
@@ -11,7 +11,7 @@ module.exports = function(database)
 	
 	route.get("/:utcid", function(request, response, next)
 	{
-		Users.findOne({utcid: request.params.utcid}, {password: 0}, function(error, profile)
+		database.users.findOne({utcid: request.params.utcid}, {password: 0}, function(error, profile)
 		{
 			if(profile)
 			{
@@ -26,7 +26,7 @@ module.exports = function(database)
 	
 	route.get("/:utcid/verify/:token", function(request, response, next)
 	{
-		var query = Users.findOne({
+		var query = database.users.findOne({
 			"utcid": request.params.utcid,
 			"verified.token": request.params.token
 		});

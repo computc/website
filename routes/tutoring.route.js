@@ -1,6 +1,6 @@
 var database = require("../database.js");
 
-module.exports = function(database)
+module.exports = function()
 {
 	var route = require("express").Router();
 	

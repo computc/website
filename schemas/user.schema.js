@@ -67,4 +67,4 @@ user.methods.isValidPassword = function(password)
 	return bcrypt.compareSync(password, this.password);
 }
 
-module.exports = mongoose.model("users", user);
+module.exports = user;
