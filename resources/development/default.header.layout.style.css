@@ -13,7 +13,7 @@ header > h1
 	
 	background-size: cover;
 	background-color: lightblue;
-	background-image: url("/images/chattanooga.jpg");
+	background-image: url("/imgs/chattanooga.jpg");
 }
 
 header > h1 > a > img

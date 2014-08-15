@@ -59,7 +59,9 @@ application.use(passport.session());
 /////////////////////routing//////////////////////
 /////////////////////////////////////////////////
 
-application.use(require("express").static("./resources"));
+application.use(require("express").static("./resources/distribution"));
+application.use(require("express").static("./resources/development"));
+
 application.use(require("./middleware/get-flash-locals.js"));
 application.use(require("./middleware/get-user-locals.js"));
 

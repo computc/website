@@ -1,0 +1,75 @@
+@import url("/fonts/font-awesome.css");
+@import url("/fonts/goldfish.css");
+@import url("/fonts/open-sans.css");
+
+*
+{
+	margin: 0px;
+}
+
+html
+{
+	color: #080808;
+	font-size: 18px;
+	font-family: open-sans, calibri, sans-serif;
+	
+	background-color: #F8F8F8;
+	background-image: url("/imgs/grey.png");
+}
+
+@media(max-width: 640px)
+{
+	html
+	{
+		font-size: 14px;
+	}
+}
+
+body
+{
+	margin: auto;
+	max-width: 1186px;
+	overflow-x: hidden;
+}
+
+#content
+{
+	padding: 2rem;
+}
+
+h2
+{
+	font-size: 2rem;
+	text-align: center;
+	font-family: goldfish;
+}
+
+hr
+{
+	width: 50%;
+	min-width: 12rem;
+	margin: 1.5rem auto;
+	
+	border: none;
+	border-top-width: 2px;
+	border-top-style: dashed;
+	border-top-color: #080808;
+}
+
+p
+{
+	text-indent: 4rem;
+	text-align: justify;
+}
+
+.button
+{
+	color: #F8F8F8;
+	text-decoration: none;
+	
+	padding: 0.5rem;
+	display: inline-block;
+	
+	border-radius: 0.25rem;
+	background-color: #CC3333;
+}
