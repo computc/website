@@ -59,16 +59,13 @@ module.exports = function(request, utcid, password, done)
 		})
 		.then(function(render)
 		{
-			if(utcid == "psn719") //debug
+			return nodemailer.sendMail(
 			{
-				return nodemailer.sendMail(
-				{
-					from: "CompUTC",
-					to: utcid + "@mocs.utc.edu",
-					subject: "Welcome to CompUTC!",
-					html: render
-				});
-			}
+				from: "CompUTC",
+				to: utcid + "@mocs.utc.edu",
+				subject: "Welcome to CompUTC!",
+				html: render
+			});
 		})
 		.then(function()
 		{

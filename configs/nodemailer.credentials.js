@@ -1,2 +1,2 @@
-module.exports.user = "YOUR GMAIL GOES HERE";
-module.exports.pass = "YOUR PASSWORD GOES HERE";
+module.exports.user = "andrewmcp333@gmail.com";
+module.exports.pass = "Nifty718";
