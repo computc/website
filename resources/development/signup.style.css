@@ -1,3 +1,8 @@
+#signup > p
+{
+	margin: 1rem auto;
+}
+
 #signup > .message
 {
 	padding: 0.5rem;

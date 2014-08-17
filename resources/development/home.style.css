@@ -19,12 +19,12 @@
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-	width: 8rem;
-	height: 2.75rem;
 	margin: auto;
+	width: 6.5rem;
+	height: 2.25rem;
 	position: absolute;
 	
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 	text-align: center;
 }
