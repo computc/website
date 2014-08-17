@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 
-module.exports = new function()
+module.exports.initiate = function()
 {
-	this.users = mongoose.model("users", require("./schemas/user.schema.js"));
+	mongoose.connect(process.env.DATABASE || "localhost/computc");
 }
+
+module.exports.users = mongoose.model("users", require("./schemas/user.schema.js"));
