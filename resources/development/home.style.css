@@ -1,5 +1,7 @@
-.call-to-action
+.us
 {
-	text-align: center;
-	margin-bottom: 1.5rem;
+	width: 100%;
+	display: block;
+	max-width: 720px;
+	margin: 1rem auto;
 }
