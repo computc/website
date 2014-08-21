@@ -1,4 +1,4 @@
-//var database = require("../database.js");
+var database = require("../database.js");
 
 var handlebars = require("express-handlebars").create(require("../configs/handlebars.options.js"));
 
@@ -15,7 +15,47 @@ module.exports = function()
 	
 	route.get("/requestion", function(request, response)
 	{
-		response.render("requestion/first");
+		response.render("requestion/submit");
+	});
+	
+	route.post("/requestion", function(request, response)
+	{
+		console.log(request.body);
+		
+		database.requestions.create({
+			utcid: "psn719", //request.user.utcid,
+			data: request.body.data
+		})
+		.then(function(requestion)
+		{
+			response.redirect("/tutoring/requestion/" + requestion.reqid);
+		},
+		function(error)
+		{
+			console.log(error)
+		})
+	});
+	
+	route.get("/requestion/:reqid", function(request, response)
+	{
+		var query = database.requestions.findOne({
+			"reqid": request.params.reqid
+		});
+		
+		query.exec().then(function(requestion)
+		{
+			if(requestion)
+			{
+				response.render("requestion/review", {
+					stuff: requestion. data
+				});
+			}
+			else
+			{
+				console.log("not here");
+				next();
+			}
+		});
 	});
 	
 	route.get("/email", function(request, response)
@@ -36,7 +76,6 @@ module.exports = function()
 		{
 			console.log(error);
 		});
-		
 	});
 	
 	return route;

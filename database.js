@@ -6,3 +6,4 @@ module.exports.initiate = function()
 }
 
 module.exports.users = mongoose.model("users", require("./schemas/user.schema.js"));
+module.exports.requestions = mongoose.model("requestions", require("./schemas/requestion.schema.js"));
