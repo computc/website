@@ -50,7 +50,7 @@ module.exports = function(request, utcid, password, done)
 		})
 		.then(function(user)
 		{
-			return handlebars.render("./emails/confirm.email.handlebars",
+			return handlebars.render("./emails/verify_new_utcid.email.handlebars",
 			{
 				utcid: user.utcid,
 				firstname: user.firstname,
