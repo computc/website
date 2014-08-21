@@ -20,11 +20,12 @@ module.exports = function()
 	
 	route.get("/email", function(request, response)
 	{
-		handlebars.render("./emails/report_new_requestion.email.handlebars",
+		handlebars.render("./emails/verify_new_utcid.email.handlebars",
 		{
 			firstname: "Andrew",
 			lastname: "McPherson",
-			
+			token: "123",
+			utcid: "psn719",
 			reqid: "1234567890"
 		})
 		.then(function(rendering)
