@@ -19,15 +19,13 @@ module.exports = function()
 	
 	route.post("/requestion", function(request, response)
 	{
-		console.log(request.body);
-		
 		database.requestions.create({
 			utcid: request.user.utcid,
 			data: request.body.data
 		})
 		.then(function(requestion)
 		{
-			messager.send("[CompUTC] New Requestion",
+			messager.send("[CompUTC] A requestion has been submitted.",
 			{
 				template: "report_new_requestion",
 				context:
@@ -36,9 +34,9 @@ module.exports = function()
 					reqid: requestion.reqid
 				}
 			},
-			request.user.utcid);
+			"andrewmcp333@gmail.com");
 			
-			messager.send("[CompUTC] Your Requestion has been Submitted!",
+			messager.send("[CompUTC] Your requestion has been submitted!",
 			{
 				template: "confirm_new_requestion",
 				context:
@@ -47,7 +45,7 @@ module.exports = function()
 					reqid: requestion.reqid
 				}
 			},
-			request.user.utcid);
+			request.user.utcid + "@mocs.utc.edu");
 			
 			response.redirect("/tutoring/requestion/" + requestion.reqid);
 		},
