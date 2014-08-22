@@ -1,7 +1,5 @@
 var database = require("../database.js");
-
-var handlebars = require("express-handlebars").create(require("../configs/handlebars.options.js"));
-var nodemailer = require("nodemailer").createTransport(require("../configs/nodemailer.configuration.js"));
+var messager = require("../messager.js");
 
 module.exports = function()
 {
@@ -12,7 +10,7 @@ module.exports = function()
 		response.render("tutoring");
 	});
 	
-	//route.use(require("../middleware/has-been-authed.js"));
+	route.use(require("../middleware/has-been-authed.js"));
 	
 	route.get("/requestion", function(request, response)
 	{
@@ -24,27 +22,32 @@ module.exports = function()
 		console.log(request.body);
 		
 		database.requestions.create({
-			utcid: "psn719", //request.user.utcid,
+			utcid: request.user.utcid,
 			data: request.body.data
 		})
 		.then(function(requestion)
 		{
-			handlebars.render("./emails/report_new_requestion.email.handlebars",
+			messager.send("[CompUTC] New Requestion",
 			{
-				firstname: "Andrew",
-				lastname: "McPherson",
-				reqid: requestion.reqid
-			})
-			.then(function(rendering)
-			{
-				return nodemailer.sendMail(
+				template: "report_new_requestion",
+				context:
 				{
-					from: "CompUTC",
-					to: "psn719@mocs.utc.edu",
-					subject: "Requestion Report",
-					html: rendering
-				});
-			});
+					firstname: request.user.firstname,
+					reqid: requestion.reqid
+				}
+			},
+			request.user.utcid);
+			
+			messager.send("[CompUTC] Your Requestion has been Submitted!",
+			{
+				template: "confirm_new_requestion",
+				context:
+				{
+					firstname: request.user.firstname,
+					reqid: requestion.reqid
+				}
+			},
+			request.user.utcid);
 			
 			response.redirect("/tutoring/requestion/" + requestion.reqid);
 		},
