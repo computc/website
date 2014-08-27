@@ -12,41 +12,33 @@
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"/>
 	</head>
 	<body>
-		
 		<header>
 			<h1>
 				<a href="/">
-					<img src="/imgs/logo.svg" alt="CompUTC"/>
+					<img src="/images/logo.svg" alt="CompUTC"/>
 				</a>
 			</h1>
-			<div>
+			<nav>
 				{{#if user}}
-					<span>
-						<a href="/profile/{{user.utcid}}">{{user.firstname}}</a>
-						<a href="/logout">Logout</a>
-					</span>
+					<a href="/profile/{{user.utcid}}">{{user.firstname}}</a>
+					<a href="/logout">Logout</a>
 				{{else}}
-					<span>
-						<a href="/signup">Signup</a> or 
-						<a href="/login">Login</a>!
-					</span>
+					<a href="/signup">Signup</a> or 
+					<a href="/login">Login</a>!
 				{{/if}}
 				<a href="#">
 					<span class="fa fa-bars"></span>
 				</a>
-			</div>
+			</nav>
 		</header>
-		
 		<div id="content">
 			{{{body}}}
 		</div>
-		
 		<footer>
 			<small>
 				Gee! You read all the way to the bottom of the page!
 				You must have a lot of time to waste on the internet.
 			</small>
 		</footer>
-		
 	</body>
 </html>

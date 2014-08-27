@@ -14,29 +14,41 @@
 	<body>
 		
 		<header>
-			<h1>
-				<img src="/imgs/logo.svg" alt="CompUTC"/>
-			</h1>
-			<!--
-			<menu>
-				<a href="/">
-					<span class="fa fa-home"></span>
-					<span class="page-name">Home</span>
+			<nav>
+				{{#if user}}
+					<a href="/profile/{{user.utcid}}">{{user.firstname}}</a>
+					<a href="/logout">Logout</a>
+				{{else}}
+					<a href="/signup">Signup</a> or 
+					<a href="/login">Login</a>!
+				{{/if}}
+				<a href="#">
+					<span class="fa fa-bars"></span>
 				</a>
-				<a href="/about">
-					<span class="fa fa-smile-o"></span>
-					<span class="page-name">About</span>
-				</a>
-				<a href="/events">
-					<span class="fa fa-calendar"></span>
-					<span class="page-name">Events</span>
-				</a>
-				<a href="/contact">
-					<span class="fa fa-comment-o"></span>
-					<span class="page-name">Contact</span>
-				</a>
-			</menu>
-			-->
+			</nav>
+			<div>
+				<h1>
+					<img src="/images/logo.svg" alt="CompUTC"/>
+				</h1>
+				<menu>
+					<a href="/">
+						<span class="fa fa-home"></span>
+						<span class="page-name">Home</span>
+					</a>
+					<a href="/about">
+						<span class="fa fa-smile-o"></span>
+						<span class="page-name">About</span>
+					</a>
+					<a href="/events">
+						<span class="fa fa-calendar"></span>
+						<span class="page-name">Events</span>
+					</a>
+					<a href="/contact">
+						<span class="fa fa-comment-o"></span>
+						<span class="page-name">Contact</span>
+					</a>
+				</menu>
+			</div>
 		</header>
 		
 		<div id="content">

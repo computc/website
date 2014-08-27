@@ -14,9 +14,9 @@ Assuming you have both [Git] and [NodeJS] already installed on your system, you 
 
 ## Navigation (needs updating)
 
-- archived_imgs: Includes some screenshots of the website that were taken throughout development. Please keep in mind that these imgs may not reflect the aesthetic of the website as it is today.
+- archived_images: Includes some screenshots of the website that were taken throughout development. Please keep in mind that these images may not reflect the aesthetic of the website as it is today.
 - content_directory and layout_directory: Stores all the markup of the website; the content is embedded within the layouts to produce the markup. At the moment, we only have a single layout for all our content, named "default layout."
-- resource_directory: Stores all the scripts and styles and imgs and fonts for the website. Absolutely everything else goes in here. 
+- resource_directory: Stores all the scripts and styles and images and fonts for the website. Absolutely everything else goes in here. 
 
 ## Development (needs updating)
 
