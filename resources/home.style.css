@@ -2,7 +2,6 @@
 {
 	width: 100%;
 	display: block;
-	max-width: 720px;
 	margin: 1rem auto;
 	position: relative;
 }
@@ -10,7 +9,7 @@
 .join-us > img
 {
 	width: 100%;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 }
 
 .join-us > .button
