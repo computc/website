@@ -7,20 +7,20 @@
 		
 		<link href="/default.style.css" rel="stylesheet" type="text/css"/>
 		<link href="/home.header.layout.style.css" rel="stylesheet" type="text/css"/>
+		<link href="/default.container.layout.style.css" rel="stylesheet" type="text/css"/>
 		<link href="/default.footer.layout.style.css" rel="stylesheet" type="text/css"/>
 		
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"/>
 	</head>
 	<body>
-		
 		<header>
 			<nav>
 				{{#if user}}
 					<a href="/profile/{{user.utcid}}">{{user.firstname}}</a>
 					<a href="/logout">Logout</a>
 				{{else}}
-					<a href="/signup">Signup</a> or 
-					<a href="/login">Login</a>!
+					<a href="/signup">Signup</a> or  
+					<a href="/login">Login</a>
 				{{/if}}
 				<a href="#">
 					<span class="fa fa-bars"></span>
@@ -50,16 +50,11 @@
 				</menu>
 			</div>
 		</header>
-		
-		<div id="content">
-			{{{body}}}
-		</div>
-		
-		<!--
 		<div id="container">
-			
+			<div id="content">
+				{{{body}}}
+			</div>
 			<div class="menu" id="left">
-				
 				<ul>
 					<li>
 						<b>Suborgs</b>
@@ -102,7 +97,6 @@
 					</li>
 					<li>
 				</ul>
-				
 				<ul>
 					<li>
 						<b>Links</b>
@@ -120,7 +114,6 @@
 						</a>
 					</li>
 				</ul>
-				
 				<ul>
 					<li>
 						<b>Pages</b>
@@ -150,11 +143,8 @@
 						</a>
 					</li>
 				</ul>
-				
 			</div>
-			
 			<div class="menu" id="right">
-				
 				<ul>
 					<li>
 						<b>Social</b>
@@ -196,18 +186,13 @@
 						</a>
 					</li>
 				</ul>
-				
 			</div>
-			
 		</div>
-		-->
-		
 		<footer>
 			<small>
 				Gee! You read all the way to the bottom of the page!
 				You must have a lot of time to waste on the internet.
 			</small>
 		</footer>
-		
 	</body>
 </html>
